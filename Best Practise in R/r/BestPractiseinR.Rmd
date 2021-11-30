@@ -8,6 +8,9 @@ output:
     logo: ../img/exploristics.jpg
     css: styles.css
     toc: yes
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -19,82 +22,127 @@ library(ggplot2)
 
 ## Best Practise in R
 
-R is an open source ecosystem with vast array of different packages from many different authors, 
-evolving of over many years and across multiple different disciples. There are no agreed conventions, 
-even within base R.
+R is an open source ecosystem with vast array of different packages from
+many different authors, evolving of over many years and across multiple
+different disciples. There are no agreed conventions, even within base
+R. See `?fisher.test()` as an example.
 
 This makes it difficult for a R user to know what convention to adopt.
 
-*Aim:* To *stimulate* discussion on best practise, *signpost* to resources & *suggest*
-some approaches to take. 
+*Aim:* To *stimulate* discussion on best practise, *signpost* to
+resources & *suggest* some approaches to take.
 
 ## Key messages
 
 The key take home messages from the *Jumping Rivers* course were:
 
-- Write code for **humans** to understand, not computers
-- Best practise is subjective and specific to individual use-cases
-- Adopt conventions, document them and be *consistent* within a Team
-- Adopting best practice may not save you time short term but will save time in long term
-- There's multiple things to consider when writing code and no one right way (trade-off)
+-   Write code for **humans** to understand, not computers
+-   Best practise is subjective and specific to individual use-cases
+-   Adopt conventions, document them and be *consistent* within a Team
+-   Write a coding style guide
+-   Adopting best practice may not save you time short term but will
+    save time in long term
+-   There's multiple things to consider when writing code and no one
+    right way (trade-off)
 
+## Naming Conventions
 
-## Naming Conventions 
+Code will run without a standard naming convention but it will make it
+difficult for others to read and interpret the code. It can lead to
+bugs, difficulty to communicate what the code does and inefficiencies.
 
-Code will run without a standard naming convention but it will make it 
-difficult for others to read and interpret the code. It can lead to bugs,
-difficulty to communicate what the code does and inefficiencies. In Kerus this
-has caused bugs between UI-Database-API-R engine with similar but slightly different 
-naming.
-Some things we name in R:
-- Files
-- Functions
-- Arguments
-- Variables
-- Classes
+In KerusCloud this has caused bugs when communicating between Database
+API R-engine with similar but slightly different naming conventions.
 
-## Naming Conventions Examples
+Some things we name in R: - Files - Functions - Arguments - Variables -
+Classes
 
+## Naming Conventions
 
+```{r naming_conventions, eval=TRUE}
+namingConventions <- read.csv(file = "../data/NamingConvention.csv")
+
+knitr::kable(namingConventions, "html")
+
+```
 
 ## Common Style Guidelines
 
-- Put space after a *comma* and not before
-- Put space before and after an *equals* sign 
-- Use assignment operator (<-) for created functions and variables
-- Maximum 80 characters per line
-- Indent curly brackets (RStudio: *Crtl + Shift + A*)
+-   Put space after a *comma* and not before
+-   Put space before and after an *equals* sign
+-   Use assignment operator (`<-`) for created functions and variables
+-   Maximum 80 characters per line
+-   Indent curly brackets (RStudio: *Crtl + Shift + A*)
+-   Don't leave in commented out code - hard to know why it's commented
+    out
+-   Read Tidyverse style guide
 
+## Useful tools
+
+-   Janitor package (cleaning up imported names)
+-   Code Formatters (Format the code for you)
+-   Code Linters (Tell you if you're following style guidelines)
+-   R Studio Add-Ins
 
 ## Modularise Code
 
-Two key elements  
+Two key elements
 
 1.  Splitting into smaller components (e.g. functions)
 2.  Collecting components together (e.g. project or package)
 
-**Don't repeat yourself** (DRY). If you're copying and pasting code it's a sign 
-you should be writing a function. If the code is in several locations then if
-you need to update it, you will need to update it in several locations.
-
+**Don't repeat yourself** (DRY). If you're copying and pasting code it's
+a sign you should be writing a function. If the code is in several
+locations then if you need to update it, you will need to update it in
+several locations.
 
 ## Modularise Code
 
-Code can evole in *spaghetti code* overtime due to ad-hoc changes and poor planning 
-& standards. This can be difficult to read, hard to identify issues and does not scale.
-Modularising your code solves these issues and has multiple advantages
+Code can evolve in *spaghetti code* overtime due to *ad-hoc* changes and
+poor planning & standards. This can be difficult to read, hard to
+identify issues and does not scale well. Modularising your code solves
+these issues and has multiple advantages:
 
+-   Easy to re-use components elsewhere (**resource**)
+-   Navigate code-base easier
+-   Different team members can work on different independent components
+-   Scales better
+-   Facilitates adopting of pre-existing solutions for components
+-   Testing and validation can occur at a lower granularity,
+    pin-pointing problems
 
-## Lessons Learnt 1 
+## Other Topics
 
-The precedence of a function will depend on the order you load packages. You can
-call a function from a specific package using the syntax 
-> package_name::function_name
+There isn't enough time to go over other topics but there's some great
+material in Jumping Rivers notes and each could be a Thursday topic.
+
+-   Functions (**page 12**)
+-   RStudio Projects (**4.1 page 26**)
+-   Dependency Management (**4.5 page 28**)
+-   Version Control (**4.6 page 29**)
+-   R packages (**4.7 page 29**)
+
+## Lessons Learnt 1
+
+The precedence of a function will depend on the order you load packages.
+You can call a function from a specific package using the syntax. \>
+package_name::function_name
+
+For example, both the *dplyr* and *MASS* package have the function
+`select` and R will use the `select` function from the last loaded
+package.
 
 ```{r PackageOrder, echo=TRUE, eval=FALSE}
 library(dplyr)
-library()
+library(MASS)
 
+# This code will return an error
+penguins %>%
+ select(species, island, bill_length_mm)
+
+# This code will run
+penguins %>%
+ dplyr::select(species, island, bill_length_mm)
 ```
 
 ## Lessons Learnt 2
@@ -102,9 +150,25 @@ library()
 Don't *hard-code* variables, create a variable at start of script.
 
 ```{r palmer_penguins_code, echo=TRUE, eval=FALSE}
-library(palmerpenguins)
-library(ggplot2)
+gentooData <- penguins[penguins$species == "Gentoo", ]
 
+ggplot(data = gentooData,
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) +
+  geom_point(aes(color = "Red"),
+    size = 3) +
+      labs(
+        title = "Relationship between flipper length and body mass for Gentoo Penguins",
+        caption = "Data Source: Palmers Penguins",
+        x = "Flipper length (mm)",
+        y = "Body mass (g)",
+      ) +
+      theme_minimal()
+```
+
+## Lessons Learnt 2
+
+```{r palmer_penguins_plot, echo=FALSE, eval=TRUE, warning=FALSE}
 gentooData <- penguins[penguins$species == "Gentoo", ]
 
 ggplot(data = gentooData,
@@ -124,43 +188,17 @@ ggplot(data = gentooData,
 
 ## Lessons Learnt 2
 
-```{r palmer_penguins_plot, echo=FALSE, eval=TRUE}
-library(palmerpenguins)
-library(ggplot2)
-
-gentooData <- penguins[penguins$species == "Gentoo", ]
-
-ggplot(data = gentooData,
-       aes(x = flipper_length_mm,
-           y = body_mass_g)) +
-  geom_point(aes(color = "Red"),
-    size = 3 ) +
-      labs(
-        title = "Relationship between flipper length and body mass for Gentoo Penguins",
-        caption = "Data Source: Palmers Penguins",
-        x = "Flipper length (mm)",
-        y = "Body mass (g)",
-      ) +
-      theme_minimal(
-      )
-```
-
-## Lessons Learnt 2
-
-Copy and pasting code is a common practice but but can lead to errors that aren't 
-always picked up on. 
+Copy and pasting code is a common practice but but can lead to errors
+that aren't always picked up on.
 
 ```{r palmer_penguins_code_error, echo=TRUE, eval=FALSE}
-library(palmerpenguins)
-library(ggplot2)
-
 chinstrapData <- penguins[penguins$species == "Chinstrap", ]
 
 ggplot(data = chinstrapData,
        aes(x = flipper_length_mm,
            y = body_mass_g)) +
   geom_point(aes(color = "Red"),
-    size = 3 ) +
+    size = 3) +
       labs(
         title = "Relationship between flipper length and body mass for Gentoo Penguins",
         caption = "Data Source: Palmers Penguins",
@@ -172,9 +210,7 @@ ggplot(data = chinstrapData,
 
 ## Lessons Learnt 2
 
-```{r palmer_penguins_plot_error, echo=FALSE, eval=FALSE}
-
-
+```{r palmer_penguins_plot_error, echo=FALSE, eval=TRUE, warning=FALSE}
 chinstrapData <- penguins[penguins$species == "Chinstrap", ]
 
 ggplot(data = chinstrapData,
@@ -190,15 +226,12 @@ ggplot(data = chinstrapData,
       theme_minimal()
 ```
 
-## Lessions Learnt 2
+## Lessons Learnt 2
 
-Create a variable at the start of the script mitigates this risk and makes it 
-easier to change the scope of the code. 
+Create a variable at the start of the script mitigates this risk and
+makes it easier to change the scope of the code.
 
-```{r palmer_penguins_plot_suggested, echo=FALSE, eval=TRUE}
-library(palmerpenguins)
-library(ggplot2)
-
+```{r palmer_penguins_plot_suggested, echo=FALSE, eval=TRUE, warning=FALSE}
 species <- "Adelie"
 dataset <- penguins[penguins$species == species, ]
 
@@ -216,23 +249,22 @@ ggplot(data = dataset,
       theme_minimal()
 ```
 
-
 ## Lessons Learnt 3
 
-Create a script to carry out as much tasks as possible or document where externalities 
-occur. Ideally if you're obtaining external data, write a script for sourcing the data
-and save it in the same project file structure. 
-If the data was obtained via USB, e-mail or one off transfer - document this. As 
-the next person coming along will have no way of knowing where these data were 
-obtained from!
+Create a script to carry out as much tasks as possible or document where
+externalities occur. Ideally if you're obtaining external data, write a
+script for sourcing the data and save it in the same project file
+structure. If the data was obtained via USB, e-mail or one off transfer
+- document this. As the next person coming along will have no way of
+knowing where these data were obtained from!
 
 ## Lessons Learnt 4
 
-When creating an index for referencing (such as a loop or lapply), use **seq_len**.
-Other sequence index creating methods can create a sequence backwards and 
-make it difficult to debug loops.
+When creating an index for referencing (such as a `for` loop or
+`lapply`), use **`seq_len`**. Other sequence index creating methods can
+create a sequence backwards and make it difficult to debug loops.
 
-```{r seq_generation, echo = TRUE}
+```{r seq_generation, echo=TRUE}
 negativeNumber <- -4
 zero <- 0
 
@@ -243,58 +275,50 @@ seq(negativeNumber)
 seq(zero)
 ```
 
-```{r seq_len, echo = TRUE, eval=FALSE}
+```{r seq_len, echo=TRUE, eval=FALSE}
 # These will return an error before your loop is run
 seq_len(negativeNumber)
 seq_len(zero)
 ```
 
-## Lessons Learnt 5 
+## Lessons Learnt 5
 
-Use **TRUE** & **FALSE** not **T** & **F**.  **TRUE** & **FALSE** are protected
-terms in R. **T** & **F** are not. 
+Use **`TRUE`** & **`FALSE`** not **`T`** & **`F`**. **`TRUE`** &
+**`FALSE`** are protected terms in R. **`T`** & **`F`** are not.
 
 ```{r TrueFalse, echo = TRUE}
 T <- FALSE
-
 # NA's propagate
 mean(penguins$bill_length_mm)
 
 # Change the na.rm argument to TRUE by using shorthand T
 mean(penguins$bill_length_mm, na.rm = T)
-
 isFALSE(T)
-
 mean(penguins$bill_length_mm, na.rm = TRUE)
 ```
 
-```{r TrueFalse2, echo = TRUE, eval = FALSE}
+## Lessons Learnt 5
+
+```{r TrueFalse2, echo = TRUE, eval=FALSE}
 # TRUE is a protected term in R
 TRUE <- FALSE
 ```
 
+```{r TrueFalse3, echo = TRUE, eval=TRUE}
+mean(penguins$bill_length_mm, na.rm = TRUE)
+```
+
 ## Lessons Learnt 6
 
-Running a script will automatically overwrite your output files! If you copy and
-paste a script and start to modify it this can lead to unintended consequences!
-A simple wrapper function can check if a file exists and if so append a date stamp 
-suffix to prevent overwriting.
+Running a script will automatically overwrite your output files! If you
+copy and paste a script and start to modify it this can lead to
+unintended consequences! A simple wrapper function can check if a file
+exists and if so append a date stamp suffix to prevent overwriting.
+
+For example of a function with Roxygen comments see
 
 ## Lessons Learnt 7
 
-Use **isTRUE** or **isFALSE** for conditionals (e.g. if statements). If you supply 
-more than one logical argument to an if statement it will take the first argument. 
-
-## Resources
-
-- Jumping Rivers Course Notes
-- Tidyverse style guide <https://style.tidyverse.org/>
-- Existing Packages
-- Each other
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
-```
-
+Use **`isTRUE`** or **`isFALSE`** for conditionals (e.g. if statements).
+If you supply more than one logical argument to an if statement it will
+take the first argument and display a warning.

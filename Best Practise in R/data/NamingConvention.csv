@@ -1,0 +1,6 @@
+Formatting,Name
+two_words,snake_case
+two.words,period.separated
+twoWords,camelCase
+TwoWords,PascalCase
+two-words,kebab-case
