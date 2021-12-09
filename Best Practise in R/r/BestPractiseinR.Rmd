@@ -314,10 +314,34 @@ copy and paste a script and start to modify it this can lead to
 unintended consequences! A simple wrapper function can check if a file
 exists and if so append a date stamp suffix to prevent overwriting.
 
-For example of a wrapper function with Roxygen comments see
+For example of a wrapper function with Roxygen comments see:
+
+https://github.com/GABurns/Presentations/blob/master/Best%20Practise%20in%20R/r/FileVersioning.R
 
 ## Lessons Learnt 7
 
 Use **`isTRUE`** or **`isFALSE`** for conditionals (i.e. if statements).
 If you supply more than one logical argument to an if statement it will
 take the first argument and display a warning.
+
+```{r isTRUE, echo = TRUE, eval=TRUE}
+myObject <- data.frame(Col1 = c(seq_along(1:5), NA_integer_))
+
+# Length of object is 1
+length(myObject)
+# Warning message displayed as a 1 x 6 logical matrix returned
+if (is.na(myObject)) {
+  print("An error message")
+} else {
+  print("Success message")
+}
+```
+
+## Lessons Learnt 7
+
+Wrapping the function `isTRUE()` around the conditional statement (`isTRUE(is.na(myObject)))`)
+will ensure that if more than one logical value is return the default behaviour of returning
+the first value isn't followed.  
+
+An alternative option would be to use `anyNA()` in this case depending on the behaviour 
+the user wanted. 
