@@ -1,7 +1,7 @@
 ---
 title: "Best Practise in R"
 author: "Gareth Burns"
-date: "02/12/2021"
+date: "09/12/2021"
 output: 
   ioslides_presentation:
     widescreen: true
@@ -29,7 +29,7 @@ R. See `?fisher.test()` as an example.
 
 This makes it difficult for a R user to know what convention to adopt.
 
-*Aim:* To *stimulate* discussion on best practise, *signpost* to
+**Aim:** To *stimulate* discussion on best practise, *signpost* to
 resources & *suggest* some approaches to take.
 
 ## Key messages
@@ -38,7 +38,7 @@ The key take home messages from the *Jumping Rivers* course were:
 
 -   Write code for **humans** to understand, not computers
 -   Best practise is subjective and specific to individual use-cases
--   Adopt conventions, document them and be *consistent* within a Team
+-   Adopt conventions, document them and be **consistent** within a Team
 -   Write a coding style guide
 -   Adopting best practice may not save you time short term but will
     save time in long term
@@ -63,7 +63,6 @@ Classes
 namingConventions <- read.csv(file = "../data/NamingConvention.csv")
 
 knitr::kable(namingConventions, "html")
-
 ```
 
 ## Common Style Guidelines
@@ -315,10 +314,10 @@ copy and paste a script and start to modify it this can lead to
 unintended consequences! A simple wrapper function can check if a file
 exists and if so append a date stamp suffix to prevent overwriting.
 
-For example of a function with Roxygen comments see
+For example of a wrapper function with Roxygen comments see
 
 ## Lessons Learnt 7
 
-Use **`isTRUE`** or **`isFALSE`** for conditionals (e.g. if statements).
+Use **`isTRUE`** or **`isFALSE`** for conditionals (i.e. if statements).
 If you supply more than one logical argument to an if statement it will
 take the first argument and display a warning.
