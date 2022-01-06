@@ -1,0 +1,212 @@
+---
+title: "Developing Packages"
+author: "Gareth Burns"
+date: "06/01/2022"
+output: 
+  ioslides_presentation:
+    widescreen: true
+    logo: ../img/exploristics.jpg
+    css: styles.css
+    toc: yes
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+```
+
+## Developing an R Package
+
+An R package is a collection of functions that have a shared purpose.
+Installing base R comes with existing core packages (e.g. `stats`), and
+tens of thousands on additional packages on additional code repositories
+CRAN, GitHub, Bioconductor.
+
+We're often using other people packages (every time we use `library`) so
+we should think about developing our own package if one doesn't already
+exist and we'll be reusing or sharing the code with others.
+
+**Aim:** The aim of the presentation today is to provide the simplest
+workflow to take a collection of existing functions and turn them into
+an R package.
+
+## Why develop an R package? (1)
+
+1.  Collects shared code/functions in a single source
+
+2.  Modularises code
+
+    1.  Easier to re-use individual components
+
+    2.  Easier to maintain
+
+3.  Encourages best practise
+
+    1.  Documentation
+
+    2.  File Structure
+
+    3.  Validation
+
+## Why develop an R package? (2)
+
+4.  Easier to share and collaborate
+
+    1.  Defined processes and structure
+    2.  Can store of code repositories
+
+5.  Scalable
+
+    1.  Kerus is an R package run on AWS
+
+    2.  DMB is an R package deployed in a Container on AWS
+
+6.  Allows access to other tools/services
+
+    1.  Unit testing
+
+    2.  Continuous Integration/ Development
+
+## What does an R Package consist of?
+
+## Description File
+
+This contains meta-data about the package
+
+    Package: mypackage
+    Title: What the Package Does (One Line, Title Case)
+    Version: 0.0.0.9000
+    Authors@R: 
+        person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+               comment = c(ORCID = "YOUR-ORCID-ID"))
+    Description: What the package does (one paragraph)
+    License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+        license
+    Encoding: UTF-8
+    Roxygen: list(markdown = TRUE)
+    RoxygenNote: 7.1.2
+
+See <https://r-pkgs.org/description.html#description>
+
+## Namespace File
+
+Defines the dependencies (what packages it imports/uses) and what is
+exported from the package (i.e. which functions a user can access).
+
+Using the `::` operator is a way of accessing what is in the namespace
+for a package (e.g. `dplyr::filter()` ).
+
+The namespace gets more complicated with OOP and C++ but it outside
+scope of current presentation.
+
+See <https://r-pkgs.org/namespace.html#namespace>
+
+## Functions (1)
+
+```{r FunctionExample, eval=FALSE, echo = TRUE}
+# Function to test values are a whole number
+
+#' @title Function to test if values are an integer
+#' @name IsWholeNumber
+#' @param values A vector of numeric values
+#' @param tolerance The level at to estimate floating-point comparisons for integer
+#' @rdname IsWholeNumber
+#' @author Gareth Burns
+#' @export
+
+IsWholeNumber <-
+  function(values, tolerance = .Machine$double.eps^0.5) {
+    abs(values - round(values)) < tolerance
+  }
+```
+
+## Functions (2)
+
+-   Documentation is created using Roxygen2
+    (<https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html>)
+
+-   Should must be stored in a folder called R
+
+-   Can have 1 file per function or multiple functions in a file
+
+-   Remember to add `#' @export` this adds function to namespace file
+
+## Workflow (1)
+
+1.  Create GitHub repository (optional)
+
+2.  Create New Project in RStudio
+
+    1.  Version Controlled Git
+    2.  Git
+    3.  Paste in URL from GitHub
+
+3.  Run functions from `usethis` package
+
+    1.  `Usethis::createpackage(getwd())`
+
+    2.  `Usethis::usedescription()`
+
+4.   Modify Description file as you see fit
+    ([https://r-pkgs.org/description.html)](https://r-pkgs.org/description.html)))
+
+5.  Check Tools -- Project Options -- Build Tools
+
+    1.  Project build tools should be "Package"
+
+    2.  Tick "Generate documentation with Roxygen"
+
+## Workflow (2)
+
+6.  Create a function in R folder (convention is to name R file the
+    function name)
+
+7.   Add Royxen comments to function (see
+    [https://r-pkgs.org/man.html)](https://r-pkgs.org/man.html))
+
+8.  Create Document file (Crtl + Shift + D)
+
+9.  Build Package (Crtl + Alt + B)
+
+10. Commit code to GitHub (*optional*)
+
+
+## How to share package
+
+### GitHub
+
+`devtools::install_github("GABurns/ExamplePackage")`
+
+*If not public ensure permission has been granted*
+
+### Share internally
+
+1.  Build the package into a source / tar file. This can be done using
+    RStudio
+
+    1.  Build \> More \> Build Source Package
+
+2.  Put the tar file in a shared network location or email to
+    collaborator. Users can either download the tar file and then
+    install the package, or install the package directly from the
+    compressed folder on the shared drive
+
+        install.packages("path/to/tar/file", source = TRUE, repos = NULL)
+
+Use `library(packageName)`
+
+## Resources
+
+-   <https://r-pkgs.org/>
+
+-   <https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html>
+
+-   <http://adv-r.had.co.nz/Functions.html>
+
+-   <https://style.tidyverse.org/functions.html>
+
+-   <https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/>
