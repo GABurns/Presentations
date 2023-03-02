@@ -1,9 +1,4 @@
 
-
-
-
-
-
 VersionFilename <- function(file_path, suffix_type = "integer") {
   # Check if file doesn't already exists
   if (!file.exists(file_path)) {
@@ -11,7 +6,6 @@ VersionFilename <- function(file_path, suffix_type = "integer") {
     # within the return (i.e. the file_path)
     return(file_path)
   } else {
-    browser()
     basename <-  tools::file_path_sans_ext(basename(file_path))
   }
 
