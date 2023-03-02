@@ -1,0 +1,262 @@
+---
+title: "Writing R Functions"
+author: "Gareth Burns"
+format: 
+  revealjs:
+    theme: dark
+editor: visual
+---
+
+## Aim
+
+The objective of this session is to provide an introductory "lunchtime session" style introduction to writing functions in R and sign-posting to additional reading material. The goal by the end of this session a participant will have the skills to write there own basic functions.
+
+## Why write functions?
+
+Initially it'll seem like extra effort to write functions and learn skills associated with working with them, so why put in that effort?
+
+-   Easier to interpret what scripts are doing
+-   Scripts become more verbose
+-   Reduces duplication of code/ parameters
+-   Easy to maintain code (only need to change in one place)
+-   Sharing code with collaborators
+-   Shared framework for working with code
+-   Portable across projects
+-   Access more advanced functionality (e.g. mapping or applying with functions)
+-   Leverage to additional resources (packages, documentation, unit tests)
+
+## What is a function?
+
+A function the basic unit of R. In it's simplest sense it's just a convenient way of running several lines of code and returning an output that you want.
+
+```{r}
+#| echo: true
+# writing out code
+sum(c(10, 20, 30, 40)) / length (c(10, 20, 30, 40))
+
+# Using a function
+mean(c(10, 20, 30, 40))
+```
+
+## What are the components of a function?
+
+There are 4 main components to a function:
+
+1.  Name
+
+2.  The inputs to the function (known as **arguments**)
+
+3.  The code the function runs (known as the **body**)
+
+4.  What is returned
+
+## Components : Name
+
+The name of a function is what's used to **call** the function. It runs the code within the function (the **body**).
+
+Some guidelines for naming a function:
+
+-   Single word (i.e. no white spaces, although \_ or - allowed)
+
+-   Concise description of what the function does
+
+-   Generally a verb
+
+-   Use a consistent case (e.g. PascalCase)
+
+## Components : arguments
+
+These are the inputs to the function and supply information the code needs to control how the function returns. This arguments can be mandatory (they need to be supplied) or optional. They can also have default values if none are supplied by the user. If you think of a plot, you will supply the values/data to be plotted,
+
+## Components : body
+
+This is the engine of the function and carries out most of the work. A function will run the code within the body and return the last value by default. The body of a function is it's own **environment.** This means you won't have access to variables outside this environment so need to pass anything you need into the function as **arguments**.
+
+## Example
+
+A common problem I had when working with Fisheries was I needed to produce hundreds of output files a year for uploading to different online data portals. We had scripts to carry out data wrangling but required *ad hoc* QC checks at end and required re-running of scripts. Sometimes I would accidentally forgot to change a variable or the re-running would overwrite existing file.
+
+## Example
+
+A simple solution in this work flow:
+
+1.  Check if existing file exists
+
+2.  If file doesn't exist create file
+
+3.  If file exists so append a suffix to file name and create new file
+
+## Example: Step 1 - boiler plate
+
+All functions will have this as a minimum. We will be using **VersionFilename** to call our function.
+
+```{r}
+#| eval: false
+#| echo: true
+VersionFilename <- function() {
+  
+}
+```
+
+## Example: Step 2 - Define Arguments
+
+Planning out what we want the function to achieve we can know what inputs we need and how we want to control the outputs of the function. This takes experience and can be an iterative process as you write the body of the function.
+
+```{r}
+#| eval: false
+#| echo: true
+VersionFilename <- function(file_path, suffix_type = "integer") {
+  
+}
+```
+
+This will mean the argument *file_path* argument is r**equired** and the *suffix_type* has a **default** of "integer".
+
+## Example: Step 3 - Write Body
+
+Sometimes it's easier to write the body of the function first or copy and paste from existing code and as this will inform what arguments you need. *Note the body of functions can use other functions.*
+
+```{r}
+#| eval: false
+#| echo: true
+VersionFilename <- function(file_path, suffix_type = "integer") {
+  
+  # Check if file doesn't already exists
+  if (!file.exists(file_path)) {
+    # A return will stop the further code running and return the output from 
+    # within the return (i.e. the file_path)
+        return(file_path)
+      } else {
+        basename <-  tools::file_path_sans_ext(basename(file_path))
+      }
+  
+  # A switch statement is a way to control flow of function
+   suffix <- switch(
+        suffix_type,
+        "integer" = {
+          # Check if there is an existing integer suffix
+          if (isTRUE(grepl("_\\d+$", basename))) {
+            version <-
+              as.numeric(stringi::stri_extract_last_regex(basename, "\\d+$")) + 1L
+          } else {
+            version <- 1L
+          }
+        },
+        "datetime" = {
+          version <- format(Sys.Date(), "%d-%m-%y %hm")
+        }
+      )
+
+   # Without a return the last thing evaluated will be returned 
+   # i.e. versionFilePath
+      versionedFilePath <-
+        file.path(dirname(file_path),
+                  paste0(basename, "_", suffix, ".", tools::file_ext(file_path)))
+}
+```
+
+## Example: Step 4 - Running function
+
+Run the function code so it's in your global environment. *Note the purpose of the function is to create a file path which is passed to another function (e.g. write.csv)*
+
+```{r}
+#| echo: true
+list.files()
+
+source("examplefunction.R")
+
+VersionFilename("WritingFunctions.qmd", suffix = "integer")
+VersionFilename("WritingFunctions.qmd", suffix = "datetime")
+```
+
+## General tips
+
+-   A function should do one thing and do it well
+
+-   A function should generally return the same type
+
+-   Try to think about edge cases - what should the function do is missing values are supplied for example?
+
+-   If returning messages provide a verbose argument so a user can choose if whether to turn it on or off.
+
+-   If others are using your functions you can guarantee what they're going to do. Validation will add some control to what your function will do
+
+## Additional Reading
+
+Here are some useful resources:
+
+[Advanced R Functions Chapter](https://adv-r.hadley.nz/functions.html "Link to Chapter 6 Advanced R")
+
+[R4DS Functions chapter](https://r4ds.had.co.nz/functions.html "Link to R for Data Science Chapter 19")
+
+[Blog](https://www.dataquest.io/blog/write-functions-in-r/ "Link to writing functions blog")
+
+[YouTube Video](https://www.youtube.com/watch?v=3uK1OzA7CTs "YouTube Video")
+
+## Useful Techniques: Sourcing functions
+
+A simple way to store and use functions is to store them together in R scripts and use the **source** function to bring them in to your global environment so you can use them in your to scripts. They must be imported before they can be used. *Be careful for namespace conflicts as the global environment will take precedence over any functions with same name from packages.*
+
+```{r}
+#| echo: true
+#| eval: false
+source(file = "examplefunction.R")
+```
+
+## Useful Techniques: Validating Type Arguments
+
+The function **stopifnot()** is useful for quick validation at the start of the function to check is arguments are the correct type. R will allow a user pass in a numeric into an argument that you intended to be a character.
+
+```{r}
+#| eval: false
+#| echo: true
+VersionFilename <- function(file_path, suffix_type = "integer") {
+
+  stopifnot(is.character(file_path))
+  
+  # Rest of body
+  }
+```
+
+## Useful Techniques: Validation Limiting Argument Choices
+
+Some arguments will only have a limited number of options and this should be detailed in documentation. The **match.arg()** function will check that the supplied argument is one of the choices (or if several are allowed).
+
+```{r}
+#| echo: true
+#| eval: false
+VersionFilename <- function(file_path, suffix_type = "integer") {
+
+  stopifnot(is.character(file_path))
+  suffix_type <- match.arg(suffix_type, choices = c("integer", "datetime"))
+  
+  # Rest of body
+  }
+```
+
+## Useful Techniques: Custom Validation
+
+Sometimes you will want custom validation and the combining an **if** statement with the **stop** function will allow this. This will stop the function from running any further and return an error message.
+
+```{r}
+#| echo: true
+#| eval: false
+VersionFilename <- function(file_path, suffix_type = "integer") {
+
+  stopifnot(is.character(file_path))
+  suffix_type <- match.arg(suffix_type, choices = c("integer", "datetime"))
+  
+  # Check if directory exists
+    if (isFALSE(dir.exists(dirname(file_path)))) {
+      stop(
+        paste0(
+          "The directory ",
+          "`",
+          dirname(file_path),
+          "`",
+          " does not exist or does not have appropiate access rights"
+        )
+      )
+    }
+  }
+```
