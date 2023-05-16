@@ -1,0 +1,131 @@
+---
+title: "Accessibility with R Programming"
+author: "Gareth Burns"
+affiliation: "Exploristics"
+author-meta: "Gareth Burns"
+format: 
+  revealjs:
+    theme: dark
+editor: visual
+---
+
+## Aim
+
+The aim of this talk is to have a lunch time style presentation on Accessibility when programming with R for [Global Accessibility Awareness Day](https://accessibility.day/). Their are 2 main aims of this presentation:
+
+1.  Demonstration how to make a a graph using `ggplot2` using R programming more accessible to users.
+
+2.  Showcase accessibility tools an R programmer has access to that may be of use to individuals or their colleagues.
+
+## What is Accessibility?
+
+There are multiple definition of accessibility and they depend on context. A good definition is "people are not excluded from using something on the basis of experiencing a disability" [^1]. In addition to having a range of abilities people also access information in different ways - for example people may be reading a report using a screen reader or navigating using a keyboard.
+
+[^1]: https://accessibility.blog.gov.uk/2016/05/16/what-we-mean-when-we-talk-about-accessibility-2/ accessed on 11th May 2023
+
+**The first step in making our outputs more accessibility is being aware of the issues others may face.**
+
+## Why is it important?
+
+Accessibility is an important aspect of R programming that is often overlooked. It's ensuring **equitability** of the outputs you produce, ensuring the message you're trying to convey or outputs created are reasonable accessible for everyone. Often this will improve you clarity of your message but also mean it can be consumed by a wider audience and aligned of the ethos of the Exploristics.
+
+## Making an accessible graph using `ggplot2`
+
+A common task in `R` programming is to produce a graph to convey information on the underlying data, such as a trend or comparison between groups. The idiom is "a picture paints a thousand words" and a well designed and thought out figure can enhance your message but it can also distract from your message or alienate some of your intended audience.
+
+## KISS
+
+As programmers get exposed to new technologies they inevitable want to showcase the new skills. This can lead to technology-driven decisions rather than business decisions - think of wrapping `ggplot2` with `as.plotly` . That may not always a good idea[^2].
+
+[^2]: https://engineering-shiny.org/ux-matters.html#b.-visual-noise accessed on 11th May 2023
+
+Another driver is as others publish complex graphs which can be seen as a proxy for technical competence. People compete to have the most technical graph with lots of functionality but little clarity or purpose.
+
+A well designed graph doesn't have to be complex and often the simplest implementation will provide a clear and concise message to all your audience.
+
+## General Tips
+
+`ggplot2` was build on the grammar of graphics and provides is a "philosophy of producing graphs". This provide a framework to produce accessible graphs but can be abused, that's why Hadley Wickham refuses to allow dual-axis graphs in `ggplot2` and limits the number of categories for comparison.
+
+1.  Reduce visual noise & clutter (labels, axis, images etc).
+
+2.  Use hierarchy and structure (Titles)
+
+3.  Be consistent within and between graphs
+
+4.  Use large sans serif fonts
+
+## Colour schemes
+
+Users can have a visual impairment that reduce their ability to distinguish colors. Online tools can simulate this. Therefore using color as the only medium to distinguish different groups/categories prevents some of your audience from being able to interpret your chart. Colour should never be the only factor to distinguish groups in your graph.
+
+## Default Colour scheme
+
+Consider the default colour scheme without a
+
+```{r}
+ggplot(mtcars, aes(x = gear, y = mpg, fill = as.factor(gear))) + 
+  geom_col(show.legend = FALSE) +
+  labs(title = "Average mpg of <span style = 'color: red;'>3</span>, <span style = 'color: green;'>4</span> or <span style = 'color: blue;'>5</span> gear cars") +
+  theme(plot.title = element_markdown(),
+        axis.title = element_blank())
+```
+
+## How this looks with visual impairment
+
+Simulated the effect of red green colourblindness using XX
+
+## Alt Text
+
+Some of your audience will use screen readers to view your graphs. Alt text is short for alternative text provides an ability for screen readers to provide an audio description of your graph or image. See Nicola Rennie [Alt Text Blog](https://www.jumpingrivers.com/blog/accessibility-alt-text-in-r/) for more details.
+
+This is easily added for a Quarto or RMarkdown document but not for MS Word or PDF.
+
+## How to add Alt Text
+
+1.  An alt label is added in `ggplot2` using the `alt` argument of the `labs` function.
+
+```{r}
+plot <-
+  ggplot(mtcars, aes(x = gear, y = mpg, fill = as.factor(gear))) +
+  geom_col(show.legend = FALSE) +
+  labs(
+    title = "Mean miles per gallon of cars in mtcars dataset",
+    y.axis = "Miles per Gallon",
+    x = "",
+    alt = "A bar chart showing the mean miles per gallon achieved by cars with 3, 4 or 5 gears. Cars with 3 cars obtained the worst miles per gallon",
+    caption = "Source: mtcars dataset"
+  ) +
+  theme_minimal() 
+```
+
+2.  Extracting the alt text
+
+3.  Add to Code chunks of Quarto or RMarkdown document
+
+    ```{r}
+    #| fig-alt: !expr ggplot2::get_alt_text(plot)
+    plot
+    ```
+
+## Granularity
+
+Displaying multiple overlapping trends on a single plot can lead to visual clutter that's hard distinguish by a user. Consider highlight the one of interest
+
+## RStudio Accessibility Features
+
+Full list available on [RStudio Accessibility Features](https://support.posit.co/hc/en-us/articles/360044226673-RStudio-Accessibility-Features)
+
+## Useful Resources
+
+-   [Global Accessibility Awareness Day](https://accessibility.day/) website
+
+-   [RStudio Accessibility Features](https://support.posit.co/hc/en-us/articles/360044226673-RStudio-Accessibility-Features)
+
+-   [Office for National Statistics Guildelines](https://style.ons.gov.uk/category/data-visualisation/chart-design/)
+
+-   Penn State Guide for charts [link](https://accessibility.psu.edu/images/charts/)
+
+-   [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+-   [Alt Text Blog](https://www.jumpingrivers.com/blog/accessibility-alt-text-in-r/)

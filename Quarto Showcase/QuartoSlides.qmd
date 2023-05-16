@@ -1,0 +1,31 @@
+---
+title: "Quarto Showcase"
+author: "Gareth Burns"
+revealjs:
+    theme: dark
+editor: visual
+---
+
+## Aim
+
+This session is to provide an introductory "lunchtime session" style introduction to Quarto. It is expected that participants will have prior knowledge of R and RMarkdown. The aim is to highlight some of the new functionality Quarto has and through building a parameter report
+
+## Quarto
+
+What is Quarto? From the Quarto documentation:
+
+*"Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>."*
+
+Quarto allows you to programically build documents (including reports, presentation slides, websites, books). These slides were build using Quarto throughout the presentation I'll highlight the strengths and weaknesses of using Quarto.
+
+## Scenario
+
+Your a new Data Analyst and your boss has tasked you with producing a report on Ireland with a map, some figures, tables and some basic demographic information. You could generate all the information in R (or another statistical program) and copy and paste in an MS Word document but you've been warned your boss always asks for changes and are aware this isn't very reproducible.
+
+As a Data Analyst you know Quarto is the perfect solution to this task! Using markdown to combine code will allow you to update the report and compile with the single press of a button and reduce the copying and pasting for each change. All manipulation of data will be in the code so you can be ass
+
+## Scenario (Part Deux)
+
+Your boss is (rightly) impressed with your report he's asked you to produced one for every country in the world!
+
+You're glad you decided on Quarto as you don't need to copy and paste into hundreds of separate Word documents but you still need up modify and run 100s of scripts with potential mistakes. Then a sage colleague suggests parameterised reports.
