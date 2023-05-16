@@ -9,6 +9,12 @@ format:
 editor: visual
 ---
 
+```{r setup}
+library(ggplot2)
+library(ggtext)
+library(ggthemes)
+```
+
 ## Aim
 
 The aim of this talk is to have a lunch time style presentation on Accessibility when programming with R for [Global Accessibility Awareness Day](https://accessibility.day/). Their are 2 main aims of this presentation:
@@ -41,17 +47,15 @@ As programmers get exposed to new technologies they inevitable want to showcase 
 
 Another driver is as others publish complex graphs which can be seen as a proxy for technical competence. People compete to have the most technical graph with lots of functionality but little clarity or purpose.
 
-A well designed graph doesn't have to be complex and often the simplest implementation will provide a clear and concise message to all your audience.
-
 ## General Tips
 
 `ggplot2` was build on the grammar of graphics and provides is a "philosophy of producing graphs". This provide a framework to produce accessible graphs but can be abused, that's why Hadley Wickham refuses to allow dual-axis graphs in `ggplot2` and limits the number of categories for comparison.
 
-1.  Reduce visual noise & clutter (labels, axis, images etc).
+1.  Use hierarchy and structure (Titles)
 
-2.  Use hierarchy and structure (Titles)
+2.  Reduce visual noise & clutter (labels, axis, images etc).
 
-3.  Be consistent within and between graphs
+3.  Be consistent with style within and between graphs
 
 4.  Use large sans serif fonts
 
@@ -61,19 +65,31 @@ Users can have a visual impairment that reduce their ability to distinguish colo
 
 ## Default Colour scheme
 
-Consider the default colour scheme without a
+Consider the default colour scheme only using colour to indicate categories.
 
 ```{r}
 ggplot(mtcars, aes(x = gear, y = mpg, fill = as.factor(gear))) + 
   geom_col(show.legend = FALSE) +
   labs(title = "Average mpg of <span style = 'color: red;'>3</span>, <span style = 'color: green;'>4</span> or <span style = 'color: blue;'>5</span> gear cars") +
   theme(plot.title = element_markdown(),
+        axis.text.x = element_blank(),
         axis.title = element_blank())
 ```
 
-## How this looks with visual impairment
+*\**[ColourBlindy](https://chrome.google.com/webstore/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg)
 
-Simulated the effect of red green colourblindness using XX
+## ColourBlind Friendly
+
+```{r}
+ggplot(mtcars, aes(x = gear, y = mpg, fill = as.factor(gear))) + 
+  geom_col(show.legend = FALSE) +
+  labs(title = "Average mpg of <span style = 'color: red;'>3</span>, <span style = 'color: green;'>4</span> or <span style = 'color: blue;'>5</span> gear cars") +
+  theme(plot.title = element_markdown(),
+        axis.text.x = element_blank(),
+        axis.title = element_blank()) +
+  scale_fill_colorblind()
+  
+```
 
 ## Alt Text
 
@@ -96,10 +112,13 @@ plot <-
     alt = "A bar chart showing the mean miles per gallon achieved by cars with 3, 4 or 5 gears. Cars with 3 cars obtained the worst miles per gallon",
     caption = "Source: mtcars dataset"
   ) +
-  theme_minimal() 
+  theme_minimal() +
+  scale_fill_colorblind()
 ```
 
-2.  Extracting the alt text
+2.  Extracting the alt text `ggplot2::get_alt_text(plot)`
+
+## How to add Alt Text (2)
 
 3.  Add to Code chunks of Quarto or RMarkdown document
 
@@ -107,10 +126,6 @@ plot <-
     #| fig-alt: !expr ggplot2::get_alt_text(plot)
     plot
     ```
-
-## Granularity
-
-Displaying multiple overlapping trends on a single plot can lead to visual clutter that's hard distinguish by a user. Consider highlight the one of interest
 
 ## RStudio Accessibility Features
 
@@ -129,3 +144,5 @@ Full list available on [RStudio Accessibility Features](https://support.posit.co
 -   [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 -   [Alt Text Blog](https://www.jumpingrivers.com/blog/accessibility-alt-text-in-r/)
+
+-   [ColourBrewer2](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
