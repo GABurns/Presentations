@@ -1,0 +1,65 @@
+---
+title: "Lessons Learnt Using Shinyapps.io"
+author: "Gareth Burns"
+affiliation: "Exploristics"
+author-meta: "Gareth Burns"
+format: 
+  revealjs:
+    theme: dark
+editor: visual
+---
+
+```{}
+```
+
+## Aim
+
+The aim of this talk is to knowledge transfer from experiences of using Golem package to develop a Shiny app that was deployed on Shinyapps.io
+
+## Application Scope
+
+The premise was relatively simple, could we create a simple app that collected contact details in a secure GDPR compliant way whilst providing a simple game that would act as a hook to get for the PSI conference
+
+## Application Scope-creep
+
+The first issue on any development project was scope creep, when different people hear about the application they want additional features/ideas to align with their role.
+
+Additionally what people say it what they literally mean:
+
+"Don't worry about styling and presentation but if you have some time work on it"
+
+Translates to
+
+"All the web applications have a minimal level of styling and if the styling you apply isn't to this minimum standard I have in my head but can't articulate then it won't be good enough to
+
+## Issues Faced
+
+1.  How to create development framework and file structure to ensure robust production ready code
+
+2.  **Shinyapps.io** lacks **Persistent storage**  
+
+3.  **Deployment** on Shinyapps.io was a iterative trial and error to ensure right packages were available
+
+4.  **Different environments** caused issues
+
+5.  **Application had state** it worked when I was testing it from he simplest path start to finish but when a user took a different route there were some unexpected outcomes
+
+6.  **Credentials handling** need to handle api keys 
+
+7.  **R Packages** didn't have all functionality I required
+
+## Development Framework
+
+## Persistent Storage
+
+## Deployment Process
+
+## But it works on my machine....
+
+## Application State
+
+## Credentials Handling
+
+## Lack of Existing Functionality
+
+## Useful Resources
