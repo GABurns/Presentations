@@ -1,0 +1,94 @@
+---
+title: "Lessons Learnt Using Shinyapps.io"
+author: "Gareth Burns"
+affiliation: "Exploristics"
+author-meta: "Gareth Burns"
+format: 
+  revealjs:
+    theme: dark
+editor: visual
+---
+
+## Aim
+
+The aim of this talk is to knowledge transfer from experiences of using `Golem` package to develop a Shiny app that was deployed on Shinyapps.io
+
+## Application Scope
+
+The premise was relatively simple, could we create a simple app that collected contact details in a secure GDPR compliant way whilst providing a simple game that would act as a hook to speak to attendee's at the PSI conference. This would also demonstrate Exploristics as a innovative company.
+
+As it was a one-off event the premises was rapid development, leveraging existing resources with a 2 day time-frame.
+
+## Application Scope-creep
+
+The first issue on any development project was scope creep, when different people hear about the application they want additional features/ideas to align with their role and outside the remit of the initial application.
+
+Additionally what the literal meaning of what people say isn't what they're trying to convey and you need to translate for them - only experience can bring this.
+
+Feedback is often only given when people they have something tangible and will always push for more. This is difficult within fixed time frames and if a commercial project could turn a profit into a lose.
+
+## Issues Faced
+
+1.  How to create development framework and file structure to ensure robust production ready code
+
+2.  **Shinyapps.io** lacks **Persistent storage**  
+
+3.  **Deployment** on Shinyapps.io was a iterative trial and error to ensure right packages were available
+
+## Issues Faced
+
+4.  **Different environments** caused application to run locally but not on shinyapps.io
+
+5.  **Application had state** it worked when I was testing it from he simplest path start to finish but when a user took a different route there were some unexpected outcomes
+
+6.  **Credentials handling** need to handle api keys 
+
+7.  **R Packages** didn't have all functionality I required
+
+## Development Framework
+
+There are lots of different ways to create a Shiny app and knowing selecting the best way is hard to know without research and planning.
+
+I choose the `Golem` framework as it provided me a resources and a framework to adopt. This was a great resource as provide steps to take and tools to rapidly create production ready Shiny code.
+
+## Persistent Storage
+
+Shiny apps are transient by design and don't persist. This means information can't be saved (contact details) or information shared across instances (scoreboard).
+
+There were some solutions but found these were challenging to implement and credentials were an issue (see below).
+
+## Deployment Process
+
+This was my first experience with Shinyapps.io. I'm used to using renv files and docker for package management and version control.
+
+I didn't have time to research how Shinyapps.io manages packages and version control isn't an issue for a one off use. I'm assuming it uses the latest version of packages at time of deployment and using Shiny as a package it retrieves the packages from Description file.
+
+## But it works on my machine....
+
+The file system was different on Shinyapps.io to local computer. Images are stored in a folder called www in the parent directory of Shiny app. However when deployed on shinapps.io it couldn't find images. I needed to do a work-around to display images.
+
+Shiny apps can take options which were used to configure the security credentials - shinyapps.io was dropping the options I configured and I couldn't figure out why (took 1/2 to identify this was an issue).
+
+## Application State
+
+Application state means that's there is objects within my application that have values that caused unexpected behavior. My application worked fine every time I tested it from start to finished by failed when Jason ran it....
+
+As the manual testing process is tedious I only went from start to finish and hadn't hit reset button. A fresh deck of cards was created each time the application was deployed but not after the reset button was pushed. Effectively it was a cached deck of cards that ran out of cards!
+
+## Credentials Handling
+
+The persistent storage solutions require to authorisation to access and save files. These require a security key and different solutions had different methodologies. I spend over a day on configuring these and had to try different methods.
+
+Some pointers:
+
+-   Don't hardcode passwords or credentials in scripts.
+
+-   Don't upload access tokens to GitHub.
+
+-   Shinyapps.io doesn't allow for environmental variables so needed to use .Renviron file.
+
+## Lack of Existing Functionality
+
+The `Rdrop2` packages seemed to solve my issue for handling credentials and accessing Dropbox.
+
+However, when using the application is isn't maintained or updated and Dropbox changed their API so a token lasts 4 hours. The behavior of the package also fails when API isn't available which crashes Shiny app - difficult to build in error handling.
