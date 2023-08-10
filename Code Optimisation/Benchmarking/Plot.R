@@ -18,13 +18,14 @@ textColour <- "white"
 
 # Plot Code ---------------------------------------------------------------
 
+# On my linux but I assume this works on windows (GB 10/08/23)
 font_add_google("Creepster", family = "Creepster")
 
 plot <-
   ggplot(results, aes(y = reorder(expr, desc(expr)), x = log10(time))) +
-  ggdist::stat_dots(side = "bottomleft",
-                    fill = secondaryColour,
-                    col = primaryColour) +
+  stat_dots(side = "bottomleft",
+            fill = secondaryColour,
+            col = primaryColour) +
   stat_slab(side = "topright",
             col = primaryColour,
             fill = secondaryColour) +
@@ -53,7 +54,7 @@ plot <-
     plot.caption = element_text(
       size = 10,
       hjust = 0,
-      color = "white",
+      color = textColour,
       family = "mono",
       vjust = -5
     ),
