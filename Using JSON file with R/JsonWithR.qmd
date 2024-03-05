@@ -1,0 +1,82 @@
+---
+title: "Introduction to using JSON file with R"
+author: "Gareth Burns"
+format: revealjs
+editor: visual
+---
+
+## Introduction
+
+Welcome to this training course on how to parse, filter, and subset JSON files in R! JSON (JavaScript Object Notation) is a popular data format used for storing and exchanging data on the web. In this course, you will learn how to work with JSON files in R using common functions and techniques.
+
+## Learning Objectives
+
+By the end of this presentation
+
+-   Read in a json file into your R environment
+-   Explore the JSON structure using KerusCloud specific examples
+-   Retrieve specific elements of information
+-   Filter
+-   Common data wrangling tasks
+    -   Convert to data.frame
+
+        Output from executable code
+
+### **What is JSON?**
+
+JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate.
+
+It's commonly used as a format to exchange information between different computer systems/programming languages.
+
+### **Why use a JSON**
+
+-   **Ubiquitous Data Format**: JSON (JavaScript Object Notation) is widely used for data exchange on the web. Understanding JSON enables seamless interaction with web APIs and data sources.
+
+-   **Flexible Data Representation**: JSON's key-value pair and array structure provide flexibility in representing complex data hierarchies. Mastery of JSON in R allows for efficient handling of diverse datasets.
+
+-   **Interoperability**: Many web services and platforms provide data in JSON format. Proficiency in parsing and manipulating JSON in R facilitates seamless integration with a variety of data sources.
+
+-   **Efficient Data Processing**: With the **`jsonlite`** package and other tools, R provides robust functionality for parsing, filtering, and transforming JSON data. Learning JSON in R enhances your data processing capabilities.
+
+-   **Expand Analytical Horizons**: Accessing JSON data opens doors to a wealth of information available on the web. By mastering JSON in R, you unlock new opportunities for analysis and insight generation.
+
+-   **Stay Relevant**: In today's data-driven world, familiarity with JSON is increasingly valuable. Keeping pace with evolving data formats ensures you remain competitive and adaptable in your analytical endeavors.
+
+### **Structure of JSON**
+
+JSON data is structured as key-value pairs and arrays, making it a flexible and versatile format for storing data.
+
+### **Example JSON Data**
+
+Let's take a look at an example JSON file:
+
+```{json}
+{
+  "name": "John",
+  "age": 30,
+  "city": "New York",
+  "pets": ["dog", "cat"]
+}
+
+```
+
+### **Loading JSON Data**
+
+We can use the **`jsonlite`** package in R to parse JSON files. Let's load a JSON file named **`data.json`**:
+
+```{r}
+library(jsonlite)
+
+# Load JSON data
+json_data <- fromJSON("data.json")
+
+# View the parsed JSON data
+print(json_data)
+
+```
+
+### **Resources**
+
+-   https://jsoneditoronline.org/
+
+-   
