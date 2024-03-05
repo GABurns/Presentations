@@ -79,4 +79,6 @@ print(json_data)
 
 -   https://jsoneditoronline.org/
 
--   
+-   [A beginner's guide to JSON, the data format for the internet - Stack Overflow](https://stackoverflow.blog/2022/06/02/a-beginners-guide-to-json-the-data-format-for-the-internet/ "https://stackoverflow.blog/2022/06/02/a-beginners-guide-to-json-the-data-format-for-the-internet/")
+
+-   [JSON Syntax (w3schools.com)](https://www.w3schools.com/js/js_json_syntax.asp "https://www.w3schools.com/js/js_json_syntax.asp")
