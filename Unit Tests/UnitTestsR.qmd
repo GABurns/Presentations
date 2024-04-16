@@ -57,7 +57,7 @@ The components of a **Unit Test:**
 
 # Let's do a example!
 
-## **Creating A Simple Function** 
+## **Creating A Simple Function**
 
 Imagine we wanted a simple function to calculate the mean values from a each coumn of a data.frame.
 
@@ -97,7 +97,9 @@ Run the function using the attitude[^2] dataset.
 
     ``` r
     library(testthat)
-    expect_silent(CalculateMeans(mtcars))
+    expect_silent(CalculateMeans(attitude))
+
+    expect_type(CalculateMeans(attitude), "double")
     ```
 
 3.  If test passes we get an invisible response when running outside of testing environment.
@@ -112,6 +114,23 @@ If we read the potential expect\_\* functions we could use `expect_identical()`!
 
 ## Second Unit Test
 
+### Calculated Expected Values
+
+``` r
+# Calculating expected values (i.e. the means)
+expectedValues <-  numeric(length = ncol(attitude))
+
+for (i in seq_len(ncol(attitude))) {
+  expectedValues[i] <-  mean(attitude[[1]])
+}
+```
+
+## Testing calculated values
+
+``` r
+expect_identical(object = CalculateMeans(attitude), expected = expectedValues)
+```
+
 # Opps!
 
 ## What went wrong?
@@ -122,23 +141,38 @@ If we look at `?expect_identical` it checks for strict equality and checks the a
 
 The `expect_equal` function relaxes this requirement so we can use this. Or alternatively update our **expected value** so it's also named.
 
+``` r
+# Option1: Alternative expect_* function
+expect_equal(object = CalculateMeans(attitude), expected = expectedValues)
+
+# Option2: Have named expectedValues
+expectedValues <- sapply(attitude, mean)
+
+expect_identical(object = CalculateMeans(attitude), expected = expectedValues)
+```
+
 ## Edge Cases
 
 ![](https://imgs.xkcd.com/comics/new_bug.png)
 
 If we're programming for a specific dataset(s) often we only check that specific dataset and when developing we want to make our code re-usable. That means the user defines the inputs to our functions and it may behave in ways we didn't expect based on their inputs.
 
-**Edge cases** arethe extreme ends of valid inputs (including empty values and \code{NAs}), so we should consider these when writing our function.
+**Edge cases** are the extreme ends of valid inputs (including empty values and \code{NAs}), so we should consider these when writing our function.
+
+# Palmer Penguins
 
 ## Development Workflow
 
-1.  Create an R package
+```{mermaid}
+flowchart TD
+A[Create R Package] --> B[Write\Update Function]
+B --> C{Write\Update Unit Tests}
+C <--> D[Run Unit test]
+```
 
-2.  Create a function
+## Cheat Sheet
 
-3.  Write unit test(s) for that function
 
-4.  Run unit tests
 
 # Showcase
 
@@ -146,11 +180,11 @@ If we're programming for a specific dataset(s) often we only check that specific
 
 1.  Keep tests simple and specific so it doesn't slow your development cycle down ⏩
 
-2.  Writing testable code, leads to modularised code, which leads to less errors and easier to maintain 👍🏾
+2.  Writing testable code, leads to modularised code, which leads to less errors and easier to maintain 👍
 
 3.  You may need to set a seed for consistent results with random number generation 🎲
 
-4.  Think of negative tests as well as positive - does my function return an error with the wrong inputs or does it silently continue? 🤫
+4.  Think of negative testing too - does my function return an error with the wrong inputs or does it silently continue? 🤫
 
 5.  Put everything back the way you found it 🔎
 
