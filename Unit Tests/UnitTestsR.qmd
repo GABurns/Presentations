@@ -1,0 +1,183 @@
+---
+title: "Unit Testing in R"
+author: "Gareth Burns"
+affiliation: "Exploristics"
+author-meta: "Gareth Burns"
+format: 
+  revealjs:
+    theme: dark
+editor: visual
+---
+
+```{r setup}
+library(testthat)
+```
+
+## Introduction
+
+The aim of this talk is to have a lunch time learning style presentation on the unit testing withing R. The 2 main aims of this presentation:
+
+1.  Provide an introduction to unit testing and the benefits having it in your toolbox can bring.
+
+2.  Provide some examples of unit testing and sign-post to additional reading material.
+
+## What are Unit Tests?
+
+A unit test is a test that checks an individual component (the unit) is performing is expecting. In R this is effectively testing a function in most cases [^1]
+
+[^1]: Can also be a method or class if using OOP
+
+When developing functions you'll check your function works as expected - by running the function and checking the output matches your expectations. And that's effectively what unit testing is, just formalisng and structuring the process!
+
+## Why Write Unit Tests?
+
+-   Save time with less testing ⌚
+
+-   Identify bugs early 🐛
+
+-   Pinpoint exactly where errors occur 🔍
+
+-   Provides confidence in your code to yourself and others 😎
+
+-   Encourages better code design 📝
+
+-   Learning something new 🏫
+
+## Unit Testing in R
+
+The components of a **Unit Test:**
+
+1.  **Expectation** - are we expecting a character or a data.frame? A certain number of rows? A specific value?
+
+2.  **Calculated value -** what your function *actually* returned.
+
+3.  **Expected Value -** what you *expected* your function to return.
+
+    If the calculated value
+
+# Let's do a example!
+
+## **Creating A Simple Function** 
+
+Imagine we wanted a simple function to calculate the mean values from a each coumn of a data.frame.
+
+``` r
+CalculateMeans <- function(data) {
+  apply(data, 2, mean)
+}
+```
+
+*How would we check to make sure this works?*
+
+## Checking a function
+
+``` r
+CalculateMeans(attitude)
+```
+
+Run the function using the attitude[^2] dataset.
+
+[^2]: attitude is a build in dataset to R. Run `?attitude` for details.
+
+1.  It runs returning no errors or warnings
+
+2.  It returns values in the correct syntax (i.e. numbers)
+
+3.  It's returning a value for each column
+
+4.  The values are what we expect
+
+## Writing our first unit test
+
+1.  Load the testthat 📦
+
+2.  Choose the [expect\_\*](https://testthat.r-lib.org/reference/index.html) function for your expectation from the testthat 📦
+
+    We'll choose expect_silent() (*checks for no errors or warnings*)
+
+    ``` r
+    library(testthat)
+    expect_silent(CalculateMeans(mtcars))
+    ```
+
+3.  If test passes we get an invisible response when running outside of testing environment.
+
+    -   Later on we'll show testing in process that returns a summary of all our tests.
+
+## Improving our robustness
+
+Our first test checked the function run, but it didn't check the actual values. So although our code runs it could still return the wrong values and we'd be none the wiser!
+
+If we read the potential expect\_\* functions we could use `expect_identical()`! For this we need the `expected` argument - i.e. what values to we expect to see returned from the function.
+
+## Second Unit Test
+
+# Opps!
+
+## What went wrong?
+
+If we look at `?expect_identical` it checks for strict equality and checks the attributes are also equal. So in this case our although the values are the same, **calculated vector (from our function)**
+
+## How to Fix
+
+The `expect_equal` function relaxes this requirement so we can use this. Or alternatively update our **expected value** so it's also named.
+
+## Edge Cases
+
+![](https://imgs.xkcd.com/comics/new_bug.png)
+
+If we're programming for a specific dataset(s) often we only check that specific dataset and when developing we want to make our code re-usable. That means the user defines the inputs to our functions and it may behave in ways we didn't expect based on their inputs.
+
+**Edge cases** arethe extreme ends of valid inputs (including empty values and \code{NAs}), so we should consider these when writing our function.
+
+## Development Workflow
+
+1.  Create an R package
+
+2.  Create a function
+
+3.  Write unit test(s) for that function
+
+4.  Run unit tests
+
+# Showcase
+
+## Hints and Tips
+
+1.  Keep tests simple and specific so it doesn't slow your development cycle down ⏩
+
+2.  Writing testable code, leads to modularised code, which leads to less errors and easier to maintain 👍🏾
+
+3.  You may need to set a seed for consistent results with random number generation 🎲
+
+4.  Think of negative tests as well as positive - does my function return an error with the wrong inputs or does it silently continue? 🤫
+
+5.  Put everything back the way you found it 🔎
+
+    -   Create temporary files
+
+    -   Revert options and environmental variables to original
+
+## Advanced Topics
+
+-   [Snapshot testing](https://testthat.r-lib.org/articles/snapshotting.html)
+
+-   [Mocking](https://testthat.r-lib.org/reference/local_mocked_bindings.html)
+
+-   Test code coverage ([covr](https://covr.r-lib.org/) 📦)
+
+-   CI/CD (e.g. [GitHub actions](https://github.com/r-lib/actions/tree/v2/check-r-package))
+
+-   Test Driven Development ([TDD](https://developer.ibm.com/articles/5-steps-of-test-driven-development/))
+
+# Q&A
+
+## Useful Resources
+
+📦 testthat [website](https://testthat.r-lib.org/)
+
+📖 R Packages: [Testing Basics](https://r-pkgs.org/testing-basics.html)
+
+📃 Coding club [blog](https://codingclubuc3m.rbind.io/post/2019-11-26/)
+
+📹 R Ladies [YouTube](https://www.youtube.com/watch?v=4bPekjzIYiU) video
