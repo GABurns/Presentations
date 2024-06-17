@@ -1,0 +1,144 @@
+---
+title: "Automated Deployment of a Package Website"
+author: "Gareth Burns"
+institute: "Exploristics"
+format: 
+  revealjs:
+    logo: logo.jpg
+    slide-number: true
+    slide-tone: true
+    theme: [default, custom.scss]
+    toc: false
+    incremental: true
+    transition: fade
+    background-transition: fade
+execute:
+  echo: false
+editor: visual
+---
+
+## Introduction
+
+This presentation is learn how to carry out a the **automated deployment** of an **R package website** when files are changed to GitHub. This code deployment pipeline can be considered as generic to apply to the following other use-cases:
+
+-   Deploying a shinyapp
+
+-   Deploying a dashboard
+
+-   Updating a datasource
+
+## Learning Objectives
+
+By the end of this presentation
+
+-   Become familiar with a pkgdown website structure
+-   Learn which package files are related to which section of website
+-   Overview of an automated CI/CD pipeline
+-   How to create a basic Code Build pipeline
+-   Common errors in building a Code Build pipeline
+
+## Why create an package website? {.smaller}
+
+**Centralized Documentation:** pkgdown provides a centralized location for all your package's documentation, vignettes, and function references. This makes it easier for users to find and navigate through information about your package.
+
+**Promotion and Visibility**: Having a dedicated website increases the visibility of your package. Users can discover it through web searches, and having clear documentation can attract more users and contributors.
+
+**Automatic Generation**: pkgdown automates the process of creating a website from your package documentation. It extracts information from your package's metadata and generates web pages, reducing manual effort.
+
+## Why create an package website? {.smaller}
+
+**Professional Appearance:** The generated website has a professional appearance with consistent styling and navigation, which enhances the overall user experience.
+
+**User Engagement**: A well-organized and informative website encourages user engagement. Users can quickly find the information they need, understand how to use your package effectively, and contribute to its development.
+
+## How to create a package website {auto-animate="true"}
+
+```{r}
+#| eval: false
+#| echo: true
+library(pkgdown)
+library(usethis)
+```
+
+## How to create a package website {auto-animate="true"}
+
+```{r}
+#| eval: false
+#| echo: true
+library(pkgdown)
+library(usethis)
+
+# Run once to configure package to use pkgdown
+usethis::use_pkgdown()
+```
+
+## How to create a package website {auto-animate="true"}
+
+```{r}
+#| eval: false
+#| echo: true
+library(pkgdown)
+library(usethis)
+
+# Run once to configure package to use pkgdown
+usethis::use_pkgdown()
+# Run to build the website
+pkgdown::build_site()
+```
+
+## How to create a package website {auto-animate="true"}
+
+```{r}
+#| eval: false
+#| echo: true
+library(pkgdown)
+library(usethis)
+
+# Run once to configure package to use pkgdown
+usethis::use_pkgdown()
+# Run to build the website
+pkgdown::build_site()
+```
+
+Easy eh?
+
+## Pre-requites
+
+For this to work seamlessly you need to have developed an R-package in a standard format, adhering to best practice and coding conventions...but when you do this you have access to a host of tools and resources!
+
+-   Readme file
+
+-   Description file
+
+-   Code documentation (roxygen2)
+
+-   Vignettes
+
+## Automated deployment workflow
+
+```{mermaid}
+flowchart LR
+  A(Write Code)<-. code review .-> B[Github]
+  B -. change detected .-> C(Recompile html)
+  C -. deploy files .-> D{Website}
+```
+
+## How can this go wrong?
+
+1.  But it works on my machine...
+
+    1.  Missing dependencies[^1]
+
+    2.  Change of permissions
+
+2.  Syntax errors
+
+::: footer
+Took failed 24 builds before first success!
+:::
+
+[^1]: Installed on Ubuntu
+
+## **Resources**
+
+-   [pkgdown website](https://pkgdown.r-lib.org/index.html)
