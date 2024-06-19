@@ -114,13 +114,21 @@ For this to work seamlessly you need to have developed an R-package in a standar
 
 -   Vignettes
 
+-   News file (Change log)
+
 ## Automated deployment workflow
 
 ```{mermaid}
+%%| fig-align: center
 flowchart LR
-  A(Write Code)<-. code review .-> B[Github]
-  B -. change detected .-> C(Recompile html)
-  C -. deploy files .-> D{Website}
+    subgraph Automated Pipeline
+      direction LR
+      A(Write Code)<-. code review .-> B[Github]
+      B -. change detected .-> C(Recompile html)
+      C -. deploy files .-> D{Website}
+      click B href "https://github.com/GABurns/ExploristicsTheme" _blank
+      click D href "http://exploristic.theme.s3-website-eu-west-1.amazonaws.com/index.html" _blank
+    end
 ```
 
 ## How can this go wrong?
@@ -133,11 +141,31 @@ flowchart LR
 
 2.  Syntax errors
 
+3. Files in wrong location (relative position)
+
+
+
 ::: footer
 Took failed 24 builds before first success!
 :::
 
 [^1]: Installed on Ubuntu
+
+## How to setup AWS CodeBuild 
+```{mermaid}
+%%| fig-align: center
+flowchart TB
+  subgraph AWS CodeBuild
+      direction LR
+      A{Code Source} --> B(Webhook)
+      B --> C(Filter)
+      C --> D[Build Environment]
+      D -.->|BuildSpec| E{{Install}}
+      E -.- F{{Pre-build}}
+      F -.- G{{Build}}
+      G -.-> H{{Deploy}}
+    end
+```
 
 ## **Resources**
 
