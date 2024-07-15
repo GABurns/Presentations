@@ -7,7 +7,6 @@ format:
   revealjs:
     logo: logo.jpg
     slide-number: true
-    slide-tone: true
     theme: [default, custom.scss]
     toc: false
     incremental: true
