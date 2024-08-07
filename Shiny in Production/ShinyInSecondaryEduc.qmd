@@ -1,9 +1,7 @@
 ---
 title: "Shiny in Secondary Education"
-subtitle: ""
+subtitle: "October 2024 | Shiny in Production"
 author: "Gareth Burns"
-date: 10/10/2024
-date-format: long
 institute: "Exploristics"
 format: 
   revealjs:
@@ -21,64 +19,142 @@ execute:
 editor: visual
 ---
 
-## Background
+## Introduction {transition="convex-in none-out"}
+
+::: columns
+::: {.column width="60%"}
+![](https://media.licdn.com/dms/image/D4E03AQEfvENIqvqi5A/profile-displayphoto-shrink_200_200/0/1708628696673?e=1728518400&v=beta&t=mrttMEp8feW98dBdURQP4SOJTQtuQ09mk3xpsANTWrc)
+
+{{< fa brands linkedin >}} [DrGarethBurns](https://www.linkedin.com/in/drgarethburns/)\
+{{< fa brands github >}} [github/GABurns](https://github.com/GABurns) {{< fa brands twitter >}} [https://x.com/GarethBurns4](@GarethBurns4)
+:::
+
+::: {.column width="40%"}
+::: fragment
+🧑‍🦰Gareth Burns
+:::
+
+::: fragment
+📊 Data Scientist for Exploristics
+:::
+
+::: fragment
+💙 Write production code for a cloud-based clinical-trial simulation SASS application
+:::
+
+::: fragment
+📢 Passionate about Scientific Communication
+:::
+:::
+:::
 
 ## Contributors
 
-
 ## Objectives
 
-- Fun
-- Engaging
-- Depth of statistical concepts
+-   Fun
+-   Engaging
+-   Aligned with data literacy (National Curriculum)
+-   Depth of statistical concepts
+-   Showcase the role of Statistician & Data Scientist
 
-## Stroop Test
+## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-> Say the background colour of the word, not the word itself[^1]
+Say the background colour of the word, not the word itself[^1]
 
 [^1]: https://en.wikipedia.org/wiki/Stroop_effect accessed on
 
 ::: r-hstack
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="color: #000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="green" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
 :::
 
 ::: r-hstack
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue1" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+PURPLE
+:::
+
+::: {data-id="green1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="color: #000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red1" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+ORANGE
+:::
+:::
+
+::: r-hstack
+::: {data-id="green2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+BLUE
+:::
+
+::: {data-id="red2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+PURPLE
+:::
+
+::: {data-id="blue2" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+GREEN
+:::
+:::
+
+## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+Say the background colour of the word, not the word itself[^2]
+
+[^2]: https://en.wikipedia.org/wiki/Stroop_effect accessed on
+
+::: r-hstack
+::: {data-id="red" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+RED
+:::
+
+::: {data-id="green" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
 :::
 
 ::: r-hstack
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
-RED
+::: {data-id="blue1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+BLUE
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="color: #000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="green1" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 
-::: {data-id="red" auto-animate-delay="0" style="colour: #2780e3; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+RED
+:::
+:::
+
+::: r-hstack
+::: {data-id="green2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+GREEN
+:::
+
+::: {data-id="red2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+RED
+:::
+
+::: {data-id="blue2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
 :::
+
+# Lessons Learnt
 
 ## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -163,10 +239,22 @@ By failing to prepare for change and you're preparing to fail.
 
 ## How I Learned to Stop Worrying and Love the Change Requests
 
+::: columns
+::: {.column width="40%"}
+<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
+:::
+
+::: {.column width="60%"}
 -   Ask questions to understand not to 'gather requirements'
 -   Write 'production ready
     -   Modularise code
     -   Test Code
+:::
+:::
 
 ## Aligning UI to Technological & Data Literacy
 
@@ -180,9 +268,9 @@ By failing to prepare for change and you're preparing to fail.
 
 Often we want R to carry out complex statistical functionality on behalf of users and display some business logical to users
 
-> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^2]
+> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
 
-[^2]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
+[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
 
 ## 
 
@@ -197,5 +285,3 @@ Often we want R to carry out complex statistical functionality on behalf of user
 ## Resources
 
 🌐 [PSI Schools Outreach](https://psiweb.org/careers/outreach/schools-outreach)
-
--   
