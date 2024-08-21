@@ -5,41 +5,62 @@ author: "Gareth Burns"
 institute: "Exploristics"
 format: 
   revealjs:
-    logo: logo.jpg
+    title-slide-attributes: 
+      data-background-image: Slides/title.PNG
+      data-background-size: contain
     slide-number: true
     theme: [default, custom.scss]
     toc: false
     incremental: true
     transition: fade
     background-transition: fade
-    auto-stretch: true
+    auto-stretch: false
     auto-animate: true
 execute:
   echo: false
 editor: visual
 ---
 
-## Introduction {transition="convex-in none-out"}
+## About Me {transition="convex-in none-out" background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
-::: {.column width="60%"}
-![](https://media.licdn.com/dms/image/D4E03AQEfvENIqvqi5A/profile-displayphoto-shrink_200_200/0/1708628696673?e=1728518400&v=beta&t=mrttMEp8feW98dBdURQP4SOJTQtuQ09mk3xpsANTWrc)
-
-{{< fa brands linkedin >}} [DrGarethBurns](https://www.linkedin.com/in/drgarethburns/)\
-{{< fa brands github >}} [github/GABurns](https://github.com/GABurns) {{< fa brands twitter >}} [https://x.com/GarethBurns4](@GarethBurns4)
-:::
-
 ::: {.column width="40%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/profile.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Gareth Burns</h2>
+            <p>Data Scientist, Exploristics</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+
+::: {.column width="60%"}
 ::: fragment
-🧑‍🦰Gareth Burns
+🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions
+🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥
 :::
 
 ::: fragment
-📊 Data Scientist for Exploristics
-:::
-
-::: fragment
-💙 Write production code for a cloud-based clinical-trial simulation SASS application
+✏️ Create for a cloud-based clinical-trial simulation SASS application
 :::
 
 ::: fragment
@@ -48,24 +69,220 @@ editor: visual
 :::
 :::
 
-## Contributors
+## Contributors {background-image="Slides/main.PNG" background-size="contain"}
 
-## Objectives
+::: columns
+::: {.column width="33%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/steve.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Steve Mallett</h2>
+            <p>Senior Manager, Veramed</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
 
--   Fun
--   Engaging
--   Aligned with data literacy (National Curriculum)
--   Depth of statistical concepts
--   Showcase the role of Statistician & Data Scientist
+::: {.column width="33%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/alex.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Alex Spiers</h2>
+            <p>Principal Statistician, GSK</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
 
-## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out"}
+::: {.column width="33%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/katie.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Katie Gwinnell</h2>
+            <p>Placement Student, Bayer</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+:::
+
+## Contributors {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="33%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/emma.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Emma Crawford</h2>
+            <p>Statistician, PSI</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+
+::: {.column width="33%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/myluong.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>My Luong Vuong</h2>
+            <p>Statistician, Kuleuven</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+:::
+
+# Background {.section-title background-image="Slides/section1.PNG" background-size="contain"}
+
+## PSI Schools Outreach {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="60%"}
+PSI supporting Schools Outreach:
+
+- Promoting opportunities in pharmaceutical/ healthcare industry
+- Sharing working with data and use of numeracy skills in industry
+- Encouraging relevant STEM studies to inspire NextGen into industry
+:::
+
+::: {.column width="40%"}
+<div class="classroom-image"></div>
+:::
+:::
+
+
+## Project Objectives {background-image="Slides/main.PNG" background-size="contain"}
+
+We wanted a Shiny application that would fulfill the brief:
+
+-   [Interactive Learning:]{.highlight} Engages students with interactive content & easy to grasp statistical concepts but developing understanding.
+-   [Data Literacy:]{.highlight} Aligned with National Curriculum.
+-   [Showcase:]{.highlight} Demonstrates the practical use of Statistician & Data Scientist.
+-   [Fun & Engaging]{.highlight}
+
+## Constraints {background-image="Slides/main.PNG" background-size="contain"}
+
+-   [Time:]{.highlight} Volunteers with no fixed.
+-   [Resources:]{.highlight} No defined budget.
+-   [Governance:]{.highlight} Commercial Conflicts & GDPR.
+-   [Logistical:]{.highlight} Deployment model.
+-   [Known Unknowns:]{.highlight} Different class sizes, equipment, levels of engagement.
+
+## Workshop Workflow {background-image="Slides/main.PNG" background-size="contain"}
+
+Previous workshops lasted **c.**45 - 60 mins had a general workflow. Where would Shiny fit in and would it potential distract?
+
+```{mermaid}
+flowchart LR
+  A(Introduction) --> B{Randomisation}
+  B --> C{Practical Experiment}
+  C --> D{Data Recording/Entry}
+  D --> E{Statistical Analysis}
+  E --> F(Conclusion)
+```
+
+# User <br> Experience {.section-title background-image="Slides/section3.PNG" background-size="contain"}
+
+## User Profile {background-image="Slides/main.PNG" background-size="contain"}
+
+First time I'd really explicitly went into psyche of a user and aligned UX with these factors.
+
+-   [Environment]{.highlight}
+-   [Data literacy]{.highlight}
+-   [Duration]{.highlight}
+
+## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 Say the background colour of the word, not the word itself[^1]
 
 [^1]: https://en.wikipedia.org/wiki/Stroop_effect accessed on
 
 ::: r-hstack
-::: {data-id="red" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
@@ -106,7 +323,7 @@ GREEN
 :::
 :::
 
-## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 Say the background colour of the word, not the word itself[^2]
 
@@ -154,9 +371,157 @@ BLUE
 :::
 :::
 
-# Lessons Learnt
+## Data Literacy {background-image="Slides/main.PNG" background-size="contain"}
 
-## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out"}
+-   National Curriculum
+-   Canvass Expert Opinion
+-   Monitor existing users
+
+## Which Graphs?
+
+::: columns
+::: {.column width="50%"}
+```{r }
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(title = "Boxplot of Flipper Length by Penguin Species",
+       x = "Species",
+       y = "Flipper Length (mm)") +
+  theme_minimal() +
+  scale_fill_manual(values = c(
+    "Adelie" = "#18213B",
+    "Chinstrap" = "#89D8C1",
+    "Gentoo" = "#CD8581"
+  )) +
+  coord_flip()
+```
+
+Aligned with curriculum and classroom learning.
+:::
+
+::: {.column width="50%"}
+```{r }
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
+  geom_violin() +
+  labs(title = "Violin of Flipper Length by Penguin Species",
+       x = "Species",
+       y = "Flipper Length (mm)") +
+  theme_minimal() +
+  scale_fill_manual(values = c(
+    "Adelie" = "#18213B",
+    "Chinstrap" = "#89D8C1",
+    "Gentoo" = "#CD8581"
+  )) +
+  coord_flip()
+
+```
+Tempted... 
+but looks like abstract art to the uninitiated.
+:::
+:::
+
+## Interactivity
+
+-   Why include interactivity elements to visualisations?
+    -   Reinforce learning
+    -   Increase classroom engagement
+    -   Display technological proficiency
+    -   Generational shift in expectations from digital natives
+
+# Technicial <br> Challenages {.section-title background-image="Slides/section5.PNG" background-size="contain"}
+
+## Persistent Storage {background-image="Slides/main.PNG" background-size="contain"}
+
+```{mermaid}
+graph TD
+    A[User 1 - Laptop <i class="fa fa-laptop"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
+    C[User 2 - Smartphone <i class="fa fa-mobile"></i>] -->|Access via App| B(Application Server <i class="fa fa-server"></i>)
+    D[User 3 - Tablet <i class="fa fa-tablet"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
+    B --> E[Shared Database <i class="fa fa-database"></i>]
+```
+
+## Abstract away complexity? {background-image="Slides/main.PNG" background-size="contain"}
+
+Often we want R to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!
+
+Should we even be using an Shiny!?
+
+> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
+
+[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
+
+## Randomisation into Groups {background-image="Slides/main.PNG" background-size="contain"}
+
+# Lessons <br> Learnt {.section-title background-image="Slides/section1.PNG" background-size="contain"}
+
+## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {#agile-principle-2 .callout-note}
+## Agile Principle #2
+
+Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+:::
+
+## Agile {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: callout-warning
+## Agile Principle #2
+
+Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+:::
+
+By failing to prepare for change and you're preparing to fail.
+
+## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;"}
+Scope
+:::
+
+## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #18213B;  width: 250px; height: 250px; border-radius: 200px; text-align: center;  color:#718BDE"}
+Asthma Workshop
+:::
+
+## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 350px; height: 350px; text-align: center;"}
+Stroop Test
+:::
+
+## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 450px; height: 450px; text-align: center;"}
+Stroop Test with cross-over design
+:::
+
+## How I Learned to Stop Worrying and Love the Change Requests {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
+:::
+
+::: {.column width="60%"}
+-   Ask questions to understand not to 'gather requirements'
+-   Write 'production ready
+    -   Modularise code
+    -   Test Code
+:::
+:::
+
+## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 20 percent of the effort to achieve 80% of outcomes.
 
@@ -173,7 +538,7 @@ BLUE
 :::
 :::
 
-## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted"}
+## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
 ::: {.column width="60%"}
@@ -193,7 +558,7 @@ Ideal for MVP/prototyping!
 :::
 :::
 
-## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
 ::: {.column width="60%"}
@@ -219,69 +584,6 @@ The expectation from external stakeholders is there's 20% of the effort to compl
 :::
 :::
 
-## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted"}
-
-::: {#agile-principle-2 .callout-note}
-## Agile Principle #2
-
-Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
-:::
-
-## Agile {auto-animate="true" auto-animate-easing="ease-in-out"}
-
-::: callout-warning
-## Agile Principle #2
-
-Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
-:::
-
-By failing to prepare for change and you're preparing to fail.
-
-## How I Learned to Stop Worrying and Love the Change Requests
-
-::: columns
-::: {.column width="40%"}
-<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
-
-</iframe>
-
-<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
-:::
-
-::: {.column width="60%"}
--   Ask questions to understand not to 'gather requirements'
--   Write 'production ready
-    -   Modularise code
-    -   Test Code
-:::
-:::
-
-## Aligning UI to Technological & Data Literacy
-
-## What is the Data Literacy of your users?
-
--   National Curriculum
--   Canvass Expert Opinion
--   Monitor existing users
-
-## Abstract away complexity?
-
-Often we want R to carry out complex statistical functionality on behalf of users and display some business logical to users
-
-> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
-
-[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
-
-## 
-
--   Why include interactivity elements to visualisations?
-    -   Reinforce learning
-    -   Increase classroom engagement through
-    -   Display technological proficiency
-    -   Generational shift in expectations from digital natives
-
-## Randomisation into Groups
-
-## Resources
+## Resources {background-image="Slides/main.PNG" background-size="contain"}
 
 🌐 [PSI Schools Outreach](https://psiweb.org/careers/outreach/schools-outreach)

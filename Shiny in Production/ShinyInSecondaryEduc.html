@@ -7,9 +7,7 @@
 <link href="ShinyInSecondaryEduc_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="ShinyInSecondaryEduc_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="ShinyInSecondaryEduc_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="ShinyInSecondaryEduc_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="ShinyInSecondaryEduc_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="ShinyInSecondaryEduc_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="ShinyInSecondaryEduc_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Gareth Burns">
@@ -322,12 +320,15 @@
       margin-right: 0; 
     }
   </style>
+  <script src="ShinyInSecondaryEduc_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="ShinyInSecondaryEduc_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="ShinyInSecondaryEduc_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="Slides/title.PNG" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Shiny in Secondary Education</h1>
   <p class="subtitle">October 2024 | Shiny in Production</p>
 
@@ -343,22 +344,40 @@ Gareth Burns
 </div>
 
 </section>
-<section id="introduction" class="slide level2" data-transition="convex-in none-out">
-<h2>Introduction</h2>
+<section id="about-me" class="slide level2" data-transition="convex-in none-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>About Me</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="https://media.licdn.com/dms/image/D4E03AQEfvENIqvqi5A/profile-displayphoto-shrink_200_200/0/1708628696673?e=1728518400&amp;v=beta&amp;t=mrttMEp8feW98dBdURQP4SOJTQtuQ09mk3xpsANTWrc.png"></p>
-<p><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <a href="https://www.linkedin.com/in/drgarethburns/">DrGarethBurns</a><br>
-<i class="fa-brands fa-github" aria-label="github"></i> <a href="https://github.com/GABurns">github/GABurns</a> <i class="fa-brands fa-twitter" aria-label="twitter"></i> <a href="@GarethBurns4">https://x.com/GarethBurns4</a></p>
-</div><div class="column" style="width:40%;">
+<div class="column" style="width:40%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/profile.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Gareth Burns</h2>
+            <p>Data Scientist, Exploristics</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div><div class="column" style="width:60%;">
 <div class="fragment">
-<p>🧑‍🦰Gareth Burns</p>
+<p>🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥</p>
 </div>
 <div class="fragment">
-<p>📊 Data Scientist for Exploristics</p>
-</div>
-<div class="fragment">
-<p>💙 Write production code for a cloud-based clinical-trial simulation SASS application</p>
+<p>✏️ Create for a cloud-based clinical-trial simulation SASS application</p>
 </div>
 <div class="fragment">
 <p>📢 Passionate about Scientific Communication</p>
@@ -366,24 +385,219 @@ Gareth Burns
 </div>
 </div>
 </section>
-<section id="contributors" class="slide level2">
+<section id="contributors" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Contributors</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/steve.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Steve Mallett</h2>
+            <p>Senior Manager, Veramed</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div><div class="column" style="width:33%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/alex.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Alex Spiers</h2>
+            <p>Principal Statistician, GSK</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div><div class="column" style="width:33%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/katie.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Katie Gwinnell</h2>
+            <p>Placement Student, Bayer</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div>
+</div>
 </section>
-<section id="objectives" class="slide level2">
-<h2>Objectives</h2>
+<section id="contributors-1" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Contributors</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/emma.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Emma Crawford</h2>
+            <p>Statistician, PSI</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div><div class="column" style="width:33%;">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <div class="profile-card">
+        <img src="img/myluong.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>My Luong Vuong</h2>
+            <p>Statistician, Kuleuven</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</div>
+</div>
+</section>
+<section>
+<section id="background" class="title-slide slide level1 section-title center" data-background-image="Slides/section1.PNG" data-background-size="contain">
+<h1>Background</h1>
+
+</section>
+<section id="psi-schools-outreach" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>PSI Schools Outreach</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>PSI supporting Schools Outreach:</p>
 <ul>
-<li class="fragment">Fun</li>
-<li class="fragment">Engaging</li>
-<li class="fragment">Aligned with data literacy (National Curriculum)</li>
-<li class="fragment">Depth of statistical concepts</li>
-<li class="fragment">Showcase the role of Statistician &amp; Data Scientist</li>
+<li class="fragment">Promoting opportunities in pharmaceutical/ healthcare industry</li>
+<li class="fragment">Sharing working with data and use of numeracy skills in industry</li>
+<li class="fragment">Encouraging relevant STEM studies to inspire NextGen into industry</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="classroom-image">
+
+</div>
+</div>
+</div>
+</section>
+<section id="project-objectives" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Project Objectives</h2>
+<p>We wanted a Shiny application that would fulfill the brief:</p>
+<ul>
+<li class="fragment"><span class="highlight">Interactive Learning:</span> Engages students with interactive content &amp; easy to grasp statistical concepts but developing understanding.</li>
+<li class="fragment"><span class="highlight">Data Literacy:</span> Aligned with National Curriculum.</li>
+<li class="fragment"><span class="highlight">Showcase:</span> Demonstrates the practical use of Statistician &amp; Data Scientist.</li>
+<li class="fragment"><span class="highlight">Fun &amp; Engaging</span></li>
 </ul>
 </section>
-<section id="stroop-test" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="constraints" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Constraints</h2>
+<ul>
+<li class="fragment"><span class="highlight">Time:</span> Volunteers with no fixed.</li>
+<li class="fragment"><span class="highlight">Resources:</span> No defined budget.</li>
+<li class="fragment"><span class="highlight">Governance:</span> Commercial Conflicts &amp; GDPR.</li>
+<li class="fragment"><span class="highlight">Logistical:</span> Deployment model.</li>
+<li class="fragment"><span class="highlight">Known Unknowns:</span> Different class sizes, equipment, levels of engagement.</li>
+</ul>
+</section>
+<section id="workshop-workflow" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Workshop Workflow</h2>
+<p>Previous workshops lasted <strong>c.</strong>45 - 60 mins had a general workflow. Where would Shiny fit in and would it potential distract?</p>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A(Introduction) --&gt; B{Randomisation}
+  B --&gt; C{Practical Experiment}
+  C --&gt; D{Data Recording/Entry}
+  D --&gt; E{Statistical Analysis}
+  E --&gt; F(Conclusion)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="user-experience" class="title-slide slide level1 section-title center" data-background-image="Slides/section3.PNG" data-background-size="contain">
+<h1>User <br> Experience</h1>
+
+</section>
+<section id="user-profile" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>User Profile</h2>
+<p>First time I’d really explicitly went into psyche of a user and aligned UX with these factors.</p>
+<ul>
+<li class="fragment"><span class="highlight">Environment</span></li>
+<li class="fragment"><span class="highlight">Data literacy</span></li>
+<li class="fragment"><span class="highlight">Duration</span></li>
+</ul>
+</section>
+<section id="stroop-test" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Stroop Test</h2>
 <p>Say the background colour of the word, not the word itself<sup>1</sup></p>
 <div class="r-hstack">
-<div data-id="red" data-auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;">
+<div data-id="red" style="color: #FF0000; width: 600px; height: 150px; text-align: center;">
 <p>RED</p>
 </div>
 <div data-id="green" data-auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;">
@@ -416,7 +630,7 @@ Gareth Burns
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>https://en.wikipedia.org/wiki/Stroop_effect accessed on</p></li></ol></aside></section>
-<section id="stroop-test-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="stroop-test-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Stroop Test</h2>
 <p>Say the background colour of the word, not the word itself<sup>1</sup></p>
 <div class="r-hstack">
@@ -453,12 +667,175 @@ Gareth Burns
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>https://en.wikipedia.org/wiki/Stroop_effect accessed on</p></li></ol></aside></section>
+<section id="data-literacy" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Data Literacy</h2>
+<ul>
+<li class="fragment">National Curriculum</li>
+<li class="fragment">Canvass Expert Opinion</li>
+<li class="fragment">Monitor existing users</li>
+</ul>
+</section>
+<section id="which-graphs" class="slide level2">
+<h2>Which Graphs?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="ShinyInSecondaryEduc_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Aligned with curriculum and classroom learning.</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="ShinyInSecondaryEduc_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tempted… but looks like abstract art to the uninitiated.</p>
+</div>
+</div>
+</section>
+<section id="interactivity" class="slide level2">
+<h2>Interactivity</h2>
+<ul>
+<li class="fragment">Why include interactivity elements to visualisations?
+<ul>
+<li class="fragment">Reinforce learning</li>
+<li class="fragment">Increase classroom engagement</li>
+<li class="fragment">Display technological proficiency</li>
+<li class="fragment">Generational shift in expectations from digital natives</li>
+</ul></li>
+</ul>
+</section></section>
 <section>
-<section id="lessons-learnt" class="title-slide slide level1 center">
-<h1>Lessons Learnt</h1>
+<section id="technicial-challenages" class="title-slide slide level1 section-title center" data-background-image="Slides/section5.PNG" data-background-size="contain">
+<h1>Technicial <br> Challenages</h1>
 
 </section>
-<section id="pareto-principle" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="persistent-storage" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Persistent Storage</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[User 1 - Laptop &lt;i class="fa fa-laptop"&gt;&lt;/i&gt;] --&gt;|Access via Browser| B(Application Server &lt;i class="fa fa-server"&gt;&lt;/i&gt;)
+    C[User 2 - Smartphone &lt;i class="fa fa-mobile"&gt;&lt;/i&gt;] --&gt;|Access via App| B(Application Server &lt;i class="fa fa-server"&gt;&lt;/i&gt;)
+    D[User 3 - Tablet &lt;i class="fa fa-tablet"&gt;&lt;/i&gt;] --&gt;|Access via Browser| B(Application Server &lt;i class="fa fa-server"&gt;&lt;/i&gt;)
+    B --&gt; E[Shared Database &lt;i class="fa fa-database"&gt;&lt;/i&gt;]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="abstract-away-complexity" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Abstract away complexity?</h2>
+<p>Often we want R to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!</p>
+<p>Should we even be using an Shiny!?</p>
+<blockquote>
+<p>…if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used<sup>1</sup></p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024</p></li></ol></aside></section>
+<section id="randomisation-into-groups" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Randomisation into Groups</h2>
+</section></section>
+<section>
+<section id="lessons-learnt" class="title-slide slide level1 section-title center" data-background-image="Slides/section1.PNG" data-background-size="contain">
+<h1>Lessons <br> Learnt</h1>
+
+</section>
+<section id="agile" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-visibility="uncounted" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Agile</h2>
+<div id="agile-principle-2">
+<div id="agile-principle-2" class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Agile Principle #2</strong></p>
+</div>
+<div class="callout-content">
+<p>Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="agile-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Agile</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Agile Principle #2</strong></p>
+</div>
+<div class="callout-content">
+<p>Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</p>
+</div>
+</div>
+</div>
+<p>By failing to prepare for change and you’re preparing to fail.</p>
+</section>
+<section id="mission-creep" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Mission Creep</h2>
+<div data-id="scope" data-auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;">
+<p>Scope</p>
+</div>
+</section>
+<section id="mission-creep-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Mission Creep</h2>
+<div data-id="scope" data-auto-animate-delay="0" style="background: #18213B;  width: 250px; height: 250px; border-radius: 200px; text-align: center;  color:#718BDE">
+<p>Asthma Workshop</p>
+</div>
+</section>
+<section id="mission-creep-2" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Mission Creep</h2>
+<div data-id="scope" data-auto-animate-delay="0" style="background: #89D8C1;  width: 350px; height: 350px; text-align: center;">
+<p>Stroop Test</p>
+</div>
+</section>
+<section id="mission-creep-3" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2 data-id="quarto-animate-title">Mission Creep</h2>
+<div data-id="scope" data-auto-animate-delay="0" style="background: #89D8C1;  width: 450px; height: 450px; text-align: center;">
+<p>Stroop Test with cross-over design</p>
+</div>
+</section>
+<section id="how-i-learned-to-stop-worrying-and-love-the-change-requests" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>How I Learned to Stop Worrying and Love the Change Requests</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style="" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a>
+</p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li class="fragment">Ask questions to understand not to ‘gather requirements’</li>
+<li class="fragment">Write ’production ready
+<ul>
+<li class="fragment">Modularise code</li>
+<li class="fragment">Test Code</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="pareto-principle" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Pareto Principle</h2>
 <p>20 percent of the effort to achieve 80% of outcomes.</p>
 <div class="r-hstack">
@@ -473,7 +850,7 @@ Gareth Burns
 </div>
 </div>
 </section>
-<section id="pareto-principle-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-visibility="uncounted">
+<section id="pareto-principle-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-visibility="uncounted" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Pareto Principle</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -502,7 +879,7 @@ Gareth Burns
 </div>
 </div>
 </section>
-<section id="pareto-principle-2" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<section id="pareto-principle-2" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2 data-id="quarto-animate-title">Pareto Principle</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -533,100 +910,10 @@ Gareth Burns
 </div>
 </div>
 </section>
-<section id="agile" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Agile</h2>
-<div id="agile-principle-2">
-<div id="agile-principle-2" class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Agile Principle #2</strong></p>
-</div>
-<div class="callout-content">
-<p>Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="agile-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title">Agile</h2>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Agile Principle #2</strong></p>
-</div>
-<div class="callout-content">
-<p>Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</p>
-</div>
-</div>
-</div>
-<p>By failing to prepare for change and you’re preparing to fail.</p>
-</section>
-<section id="how-i-learned-to-stop-worrying-and-love-the-change-requests" class="slide level2">
-<h2>How I Learned to Stop Worrying and Love the Change Requests</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style="" frameborder="0" class="giphy-embed" allowfullscreen="">
-</iframe>
-<p>
-<a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a>
-</p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li class="fragment">Ask questions to understand not to ‘gather requirements’</li>
-<li class="fragment">Write ’production ready
-<ul>
-<li class="fragment">Modularise code</li>
-<li class="fragment">Test Code</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="aligning-ui-to-technological-data-literacy" class="slide level2">
-<h2>Aligning UI to Technological &amp; Data Literacy</h2>
-</section>
-<section id="what-is-the-data-literacy-of-your-users" class="slide level2">
-<h2>What is the Data Literacy of your users?</h2>
-<ul>
-<li class="fragment">National Curriculum</li>
-<li class="fragment">Canvass Expert Opinion</li>
-<li class="fragment">Monitor existing users</li>
-</ul>
-</section>
-<section id="abstract-away-complexity" class="slide level2">
-<h2>Abstract away complexity?</h2>
-<p>Often we want R to carry out complex statistical functionality on behalf of users and display some business logical to users</p>
-<blockquote>
-<p>…if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used<sup>1</sup></p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024</p></li></ol></aside></section>
-<section id="section" class="slide level2">
-<h2></h2>
-<ul>
-<li class="fragment">Why include interactivity elements to visualisations?
-<ul>
-<li class="fragment">Reinforce learning</li>
-<li class="fragment">Increase classroom engagement through</li>
-<li class="fragment">Display technological proficiency</li>
-<li class="fragment">Generational shift in expectations from digital natives</li>
-</ul></li>
-</ul>
-</section>
-<section id="randomisation-into-groups" class="slide level2">
-<h2>Randomisation into Groups</h2>
-</section>
-<section id="resources" class="slide level2">
+<section id="resources" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Resources</h2>
 <p>🌐 <a href="https://psiweb.org/careers/outreach/schools-outreach">PSI Schools Outreach</a></p>
 <div class="quarto-auto-generated-content">
-<p><img src="logo.jpg" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -843,6 +1130,44 @@ Gareth Burns
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
