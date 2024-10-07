@@ -55,12 +55,12 @@ editor: visual
 
 ::: {.column width="60%"}
 ::: fragment
-🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions
+🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions\
 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥
 :::
 
 ::: fragment
-✏️ Create for a cloud-based clinical-trial simulation SASS application
+✏️ Create for a cloud-based clinical-trial simulation SaaS application
 :::
 
 ::: fragment
@@ -216,41 +216,85 @@ editor: visual
 :::
 :::
 
-# Background {.section-title background-image="Slides/section1.PNG" background-size="contain"}
-
 ## PSI Schools Outreach {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
 ::: {.column width="60%"}
-PSI supporting Schools Outreach:
-
-- Promoting opportunities in pharmaceutical/ healthcare industry
-- Sharing working with data and use of numeracy skills in industry
-- Encouraging relevant STEM studies to inspire NextGen into industry
+-   Promoting opportunities in pharmaceutical/ healthcare industry
+-   Sharing working with data and use of numeracy skills in industry
+-   Encouraging relevant STEM studies to inspire NextGen into industry
 :::
 
 ::: {.column width="40%"}
-<div class="classroom-image"></div>
+::: classroom-image
 :::
 :::
-
+:::
 
 ## Project Objectives {background-image="Slides/main.PNG" background-size="contain"}
 
-We wanted a Shiny application that would fulfill the brief:
+Expand Outreach objectives with Shiny application that facilitates:
 
 -   [Interactive Learning:]{.highlight} Engages students with interactive content & easy to grasp statistical concepts but developing understanding.
 -   [Data Literacy:]{.highlight} Aligned with National Curriculum.
--   [Showcase:]{.highlight} Demonstrates the practical use of Statistician & Data Scientist.
--   [Fun & Engaging]{.highlight}
+-   [Showcase:]{.highlight} Demonstrates technology enabled industry.
+-   [Fun & Engaging]{.highlight} 🤡🎉
 
-## Constraints {background-image="Slides/main.PNG" background-size="contain"}
+# Timeline {.section-title background-image="Slides/section1.PNG" background-size="contain"}
 
--   [Time:]{.highlight} Volunteers with no fixed.
--   [Resources:]{.highlight} No defined budget.
--   [Governance:]{.highlight} Commercial Conflicts & GDPR.
--   [Logistical:]{.highlight} Deployment model.
--   [Known Unknowns:]{.highlight} Different class sizes, equipment, levels of engagement.
+## First Contact {background-image="Slides/main.PNG" background-size="contain"}
+
+![](img/SchoolsInvite.png)
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;"}
+Scope
+:::
+
+## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
+
+::: fragment
+::: {#agile-principle-2 .callout-note}
+## Agile Principle #2
+
+Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+:::
+:::
+
+## Agile {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: callout-warning
+## Agile Principle #2
+
+Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+:::
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #18213B;  width: 250px; height: 250px; border-radius: 200px; text-align: center;  color:#718BDE"}
+Asthma Workshop
+:::
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 350px; height: 350px; text-align: center;"}
+Stroop Test
+:::
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 450px; height: 450px; text-align: center;"}
+Stroop Test with cross-over design
+:::
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 900px; height: 500px; text-align: center; background-size: cover; background-image:url('https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?cs=srgb&dl=pexels-pixabay-256395.jpg&fm=jpg')"}
+My prototype is about to be used as a live application
+:::
+
+# Recap {.section-title background-image="Slides/section3.PNG" background-size="contain"}
 
 ## Workshop Workflow {background-image="Slides/main.PNG" background-size="contain"}
 
@@ -265,21 +309,21 @@ flowchart LR
   E --> F(Conclusion)
 ```
 
-# User <br> Experience {.section-title background-image="Slides/section3.PNG" background-size="contain"}
-
 ## User Profile {background-image="Slides/main.PNG" background-size="contain"}
 
 First time I'd really explicitly went into psyche of a user and aligned UX with these factors.
 
--   [Environment]{.highlight}
--   [Data literacy]{.highlight}
--   [Duration]{.highlight}
+-   [Physical Environment]{.highlight}
+-   [Equipment]{.highlight}
+-   [Format]{.highlight}
+-   [Technological & Data literacy]{.highlight}
+-   [Usage Duration]{.highlight}
 
 ## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 Say the background colour of the word, not the word itself[^1]
 
-[^1]: https://en.wikipedia.org/wiki/Stroop_effect accessed on
+[^1]: https://en.wikipedia.org/wiki/Stroop_effect accessed on 8th October 2024
 
 ::: r-hstack
 ::: {data-id="red" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
@@ -325,9 +369,9 @@ GREEN
 
 ## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
-Say the background colour of the word, not the word itself[^2]
+Say the colour of the ink word, not the word itself[^2]
 
-[^2]: https://en.wikipedia.org/wiki/Stroop_effect accessed on
+[^2]: https://en.wikipedia.org/wiki/Stroop_effect accessed on 8th October 2024
 
 ::: r-hstack
 ::: {data-id="red" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
@@ -371,13 +415,54 @@ BLUE
 :::
 :::
 
+# Application Design
+
+## Abstract away complexity? {background-image="Slides/main.PNG" background-size="contain"}
+
+Often we want R to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!
+
+Should we even be using an Shiny!?
+
+> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
+
+[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
+
+## Randomisation {background-image="Slides/main.PNG" background-size="contain"}
+
+Added a button so the user required to explicitly had carry out randomisation.
+
+::: columns
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+-   HTML and CSS
+-   Info cards
+-   `reactivePoll`& ggplot2 📦
+    -   Consider empty state!
+:::
+:::
+
+## Data Entry {background-image="Slides/main.PNG" background-size="contain"}
+
+Initial designs and experiments required manual data entry which caused some issues...
+
+-   Data Governance
+    -   Privacy by design
+-   Validation[^4]
+-   Editing incorrect data
+
+[^4]: 📦 shinyvalidate
+
+## Self-serving data capture
+
 ## Data Literacy {background-image="Slides/main.PNG" background-size="contain"}
 
 -   National Curriculum
 -   Canvass Expert Opinion
 -   Monitor existing users
 
-## Which Graphs?
+## Which Visualisations?
 
 ::: columns
 ::: {.column width="50%"}
@@ -421,10 +506,57 @@ ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
   coord_flip()
 
 ```
-Tempted... 
-but looks like abstract art to the uninitiated.
+
+Tempted... but looks like abstract art to the uninitiated.
 :::
 :::
+
+# Accessibilty
+
+## Dealing with Changing Requirements {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
+:::
+
+::: {.column width="60%"}
+-   Ask questions to understand the problem not to 'gather requirements'
+-   Write 'production ready' code early
+    -   Modularise code
+    -   Test Code
+-   Are your processes scalable?
+    -   Deployment
+    -   On-boarding Users
+    -   Changes (internal and external)
+:::
+:::
+
+# What is Production?
+
+## What is Production?[^5] {background-image="Slides/main.PNG" background-size="contain"}
+
+[^5]: https://engineering-shiny.org/#what-is-production
+
+-   It is [used]{.highlight}, even if only by one person.
+-   It is [relied upon]{.highlight} by its user(s).
+-   It has [real life impact]{.highlight} if something goes wrong.
+
+::: aside
+Definition taken from:
+:::
+
+## Constraints {background-image="Slides/main.PNG" background-size="contain"}
+
+-   [Time:]{.highlight} Volunteers with no fixed.
+-   [Resources:]{.highlight} No defined budget.
+-   [Governance:]{.highlight} Commercial Conflicts & GDPR.
+-   [Logistical:]{.highlight} Deployment model.
+-   [Known Unknowns:]{.highlight} Different class sizes, equipment, levels of engagement.
 
 ## Interactivity
 
@@ -434,7 +566,7 @@ but looks like abstract art to the uninitiated.
     -   Display technological proficiency
     -   Generational shift in expectations from digital natives
 
-# Technicial <br> Challenages {.section-title background-image="Slides/section5.PNG" background-size="contain"}
+# Technicial Challenages {.section-title background-image="Slides/section5.PNG" background-size="contain"}
 
 ## Persistent Storage {background-image="Slides/main.PNG" background-size="contain"}
 
@@ -446,23 +578,11 @@ graph TD
     B --> E[Shared Database <i class="fa fa-database"></i>]
 ```
 
-## Abstract away complexity? {background-image="Slides/main.PNG" background-size="contain"}
-
-Often we want R to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!
-
-Should we even be using an Shiny!?
-
-> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
-
-[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
-
-## Randomisation into Groups {background-image="Slides/main.PNG" background-size="contain"}
-
-# Lessons <br> Learnt {.section-title background-image="Slides/section1.PNG" background-size="contain"}
+# Lessons Learnt {.section-title background-image="Slides/section1.PNG" background-size="contain"}
 
 ## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
 
-::: {#agile-principle-2 .callout-note}
+::: callout-note
 ## Agile Principle #2
 
 Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
@@ -477,49 +597,6 @@ Welcome changing requirements, even late in development. Agile processes harness
 :::
 
 By failing to prepare for change and you're preparing to fail.
-
-## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;"}
-Scope
-:::
-
-## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #18213B;  width: 250px; height: 250px; border-radius: 200px; text-align: center;  color:#718BDE"}
-Asthma Workshop
-:::
-
-## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 350px; height: 350px; text-align: center;"}
-Stroop Test
-:::
-
-## Mission Creep {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 450px; height: 450px; text-align: center;"}
-Stroop Test with cross-over design
-:::
-
-## How I Learned to Stop Worrying and Love the Change Requests {background-image="Slides/main.PNG" background-size="contain"}
-
-::: columns
-::: {.column width="40%"}
-<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
-
-</iframe>
-
-<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
-:::
-
-::: {.column width="60%"}
--   Ask questions to understand not to 'gather requirements'
--   Write 'production ready
-    -   Modularise code
-    -   Test Code
-:::
-:::
 
 ## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
@@ -584,6 +661,37 @@ The expectation from external stakeholders is there's 20% of the effort to compl
 :::
 :::
 
+# 
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 900px; height: 500px; text-align: center; background-size: cover; background-image:'img/Stroopfeedback.png'"}
+My prototype is about to be used as a live application
+:::
+
+## 
+
+![](img/StMacStroop.jpeg)
+
+## Project Update {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+-   [Interactive Learning:]{.highlight}\
+-   [Data Literacy:]{.highlight}
+-   [Showcase:]{.highlight}
+-   [Fun & Engaging]{.highlight}
+:::
+
+::: {.column width="60%"}
+![](img/Stroop_feedback.png)
+:::
+:::
+
+## How you can contribute {background-image="Slides/main.PNG" background-size="contain"}
+
+Ask questions! - Provide feedback - Promote STEM to the next generation - Join the team of volunteers!
+
 ## Resources {background-image="Slides/main.PNG" background-size="contain"}
 
 🌐 [PSI Schools Outreach](https://psiweb.org/careers/outreach/schools-outreach)
+
+👩‍🏫 [Jumping Rivers Accessibility](https://www.jumpingrivers.com/training/course/web-accessibility-in-shiny/)

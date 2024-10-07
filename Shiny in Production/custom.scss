@@ -1,8 +1,120 @@
 /*-- scss:defaults --*/
 
-  $body-bg: #16213D;
-  $body-color: #fff;
-  $link-color: #42affa;
-  $presentation-heading-color: #fff;
-  $code-block-bg:	#A1B9E0;
-  $code-block-border-color:	lighten($body-color, 10%);
+$exploristics-darkblue: #18213B;
+$exploristics-lightblue: #718BDE;
+$exploristics-paleblue:#A4B8DC;
+$exploristics-coral: #CD8581;
+$exploristics-green:#89D8C1;
+$exploristics-white:#fff;
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+$body-color: $exploristics-darkblue;
+$link-color: $exploristics-lightblue;
+$presentation-heading-color: $exploristics-darkblue;
+$code-block-bg:	$exploristics-paleblue;
+$code-block-border-color:	lighten($body-color, 10%);
+$presentation-title-slide-text-align: left;
+
+$font-family-sans-serif: 'Questrial', sans-serif;
+$presentation-heading-font: 'Questrial';
+
+/*-- scss:rules --*/
+
+/* Change title slide text color */
+.title, .subtitle, .quarto-title-author-name, .quarto-title-affiliation {
+  color: $exploristics-white !important;
+}
+
+/* Change highlighted text color */
+.highlight {
+  color: $exploristics-coral !important;
+  font-weight: bold;
+}
+
+.reveal h2 {
+  margin: 0 0 60px 0;
+}
+
+.section-title{
+  text-align: right;
+}
+
+/* Change the bullet point color */
+.reveal ul li::marker  {
+  color: $exploristics-coral;
+}
+
+
+
+
+
+/* Profile Card CSS */
+.profile-card {
+            background: $exploristics-coral;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Ensure the image covers the element */
+            margin-top: 20px;
+        }
+
+        .profile-card .profile-content {
+            padding: 20px;
+        }
+
+        .profile-card .profile-content h2 {
+            margin: 0;
+            color: $exploristics-darkblue;
+            font-size: 36px;
+        }
+
+        .profile-card .profile-content p {
+            color: $exploristics-white;
+            margin: 10px 0 20px;
+            font-size: 24px;
+        }
+
+        .profile-card .profile-content .social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .profile-card .profile-content .social a {
+            color: $exploristics-darkblue;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .profile-card .profile-content .social a:hover {
+            color: #000;
+        }
+
+.classroom-image {
+  width: 400px;
+  height: 400px;
+  background-image: url("https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?cs=srgb&dl=pexels-pixabay-256395.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  margin: auto;
+  display: block;
+}
+
+
+
