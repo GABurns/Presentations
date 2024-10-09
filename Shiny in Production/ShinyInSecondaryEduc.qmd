@@ -69,6 +69,21 @@ editor: visual
 :::
 :::
 
+## PSI Schools Outreach {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="60%"}
+-   Promoting opportunities in pharmaceutical/ healthcare industry
+-   Sharing working with data and use of numeracy skills in industry
+-   Encouraging relevant STEM studies to inspire NextGen into industry
+:::
+
+::: {.column width="40%"}
+::: classroom-image
+:::
+:::
+:::
+
 ## Contributors {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
@@ -216,24 +231,9 @@ editor: visual
 :::
 :::
 
-## PSI Schools Outreach {background-image="Slides/main.PNG" background-size="contain"}
-
-::: columns
-::: {.column width="60%"}
--   Promoting opportunities in pharmaceutical/ healthcare industry
--   Sharing working with data and use of numeracy skills in industry
--   Encouraging relevant STEM studies to inspire NextGen into industry
-:::
-
-::: {.column width="40%"}
-::: classroom-image
-:::
-:::
-:::
-
 ## Project Objectives {background-image="Slides/main.PNG" background-size="contain"}
 
-Expand Outreach objectives with Shiny application that facilitates:
+[Shiny in Secondary Education]{.highlight} objectives:
 
 -   [Interactive Learning:]{.highlight} Engages students with interactive content & easy to grasp statistical concepts but developing understanding.
 -   [Data Literacy:]{.highlight} Aligned with National Curriculum.
@@ -245,12 +245,6 @@ Expand Outreach objectives with Shiny application that facilitates:
 ## First Contact {background-image="Slides/main.PNG" background-size="contain"}
 
 ![](img/SchoolsInvite.png)
-
-## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;"}
-Scope
-:::
 
 ## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
 
@@ -268,6 +262,12 @@ Welcome changing requirements, even late in development. Agile processes harness
 ## Agile Principle #2
 
 Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+:::
+
+## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #2780e3;  width: 250px; height: 250px; border-radius: 200px; text-align: center; line-height: 100vh;"}
+Scope
 :::
 
 ## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
@@ -290,15 +290,35 @@ Stroop Test with cross-over design
 
 ## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
-::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 900px; height: 500px; text-align: center; background-size: cover; background-image:url('https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?cs=srgb&dl=pexels-pixabay-256395.jpg&fm=jpg')"}
-My prototype is about to be used as a live application
+::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/ApplicationState.jpg');"}
+[The application is broke 2 hours before I've to use it with students]{.white-text}
 :::
 
-# Recap {.section-title background-image="Slides/section3.PNG" background-size="contain"}
+# Schools Outreach {.section-title background-image="Slides/section3.PNG" background-size="contain"}
+
+## Technology in Schools {background-image="Slides/main.PNG" background-size="contain"}
+
+::: fragment
+> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used ^[National Curriculum https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study]
+:::
+
+::: fragment
+Should we even be using an Shiny!?
+:::
+
+## Technology {background-image="Slides/main.PNG" background-size="contain"}
+
+Why use technology in for learning statistics?
+
+-   [Reinforce learning]{.highlight}
+-   [Increase classroom engagement]{.highlight}
+-   [Require technological proficiency in work]{.highlight}
+-   [Real-time feedback]{.highlight}
+-   [Generational shift in expectations from digital natives]{.highlight}
 
 ## Workshop Workflow {background-image="Slides/main.PNG" background-size="contain"}
 
-Previous workshops lasted **c.**45 - 60 mins had a general workflow. Where would Shiny fit in and would it potential distract?
+Previous workshops lasted **c.**45 - 60 mins had the following general workflow. Where would Shiny fit in and would it potential distract?
 
 ```{mermaid}
 flowchart LR
@@ -309,16 +329,6 @@ flowchart LR
   E --> F(Conclusion)
 ```
 
-## User Profile {background-image="Slides/main.PNG" background-size="contain"}
-
-First time I'd really explicitly went into psyche of a user and aligned UX with these factors.
-
--   [Physical Environment]{.highlight}
--   [Equipment]{.highlight}
--   [Format]{.highlight}
--   [Technological & Data literacy]{.highlight}
--   [Usage Duration]{.highlight}
-
 ## Stroop Test {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
 Say the background colour of the word, not the word itself[^1]
@@ -326,43 +336,43 @@ Say the background colour of the word, not the word itself[^1]
 [^1]: https://en.wikipedia.org/wiki/Stroop_effect accessed on 8th October 2024
 
 ::: r-hstack
-::: {data-id="red" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red1" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
-::: {data-id="green" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="green1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 
-::: {data-id="blue" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue1" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
 :::
 
 ::: r-hstack
-::: {data-id="blue1" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="purple1" auto-animate-delay="0" style="color: #800080; width: 600px; height: 150px; text-align: center;"}
 PURPLE
 :::
 
-::: {data-id="green1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red2" auto-animate-delay="0" style="color:#FF0000; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
-::: {data-id="red1" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="orange1" auto-animate-delay="0" style="color: #FFA500; width: 600px; height: 150px; text-align: center;"}
 ORANGE
 :::
 :::
 
 ::: r-hstack
-::: {data-id="green2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue2" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
 
-::: {data-id="red2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="purple2" auto-animate-delay="0" style="color: #800080; width: 600px; height: 150px; text-align: center;"}
 PURPLE
 :::
 
-::: {data-id="blue2" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="green2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 :::
@@ -374,58 +384,54 @@ Say the colour of the ink word, not the word itself[^2]
 [^2]: https://en.wikipedia.org/wiki/Stroop_effect accessed on 8th October 2024
 
 ::: r-hstack
-::: {data-id="red" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="red1" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
 RED
 :::
 
-::: {data-id="green" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="green1" auto-animate-delay="0" style="color: #FFA500; width: 600px; height: 150px; text-align: center;"}
 GREEN
 :::
 
-::: {data-id="blue" auto-animate-delay="0" style="color: #0000FF; width: 600px; height: 150px; text-align: center;"}
-BLUE
-:::
-:::
-
-::: r-hstack
 ::: {data-id="blue1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
-
-::: {data-id="green1" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
-GREEN
 :::
 
-::: {data-id="red1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+::: r-hstack
+::: {data-id="purple1" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+PURPLE
+:::
+
+::: {data-id="red2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
 RED
+:::
+
+::: {data-id="orange1" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+ORANGE
 :::
 :::
 
 ::: r-hstack
-::: {data-id="green2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
-GREEN
-:::
-
-::: {data-id="red2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
-RED
-:::
-
-::: {data-id="blue2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+::: {data-id="blue2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
 BLUE
 :::
+
+::: {data-id="purple2" auto-animate-delay="0" style="color: #008000; width: 600px; height: 150px; text-align: center;"}
+PURPLE
 :::
 
-# Application Design
+::: {data-id="green2" auto-animate-delay="0" style="color: #FF0000; width: 600px; height: 150px; text-align: center;"}
+GREEN
+:::
+:::
 
-## Abstract away complexity? {background-image="Slides/main.PNG" background-size="contain"}
+# Accessibilty
 
-Often we want R to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!
+# Implementation {.section-title background-image="Slides/section1.PNG" background-size="contain"}
 
-Should we even be using an Shiny!?
+## Abstraction {background-image="Slides/main.PNG" background-size="contain"}
 
-> ...if written and mental arithmetic are secure. In both primary and secondary schools, teachers should use their judgement about when ICT tools should be used[^3]
-
-[^3]: https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study accessed on 6th August 2024
+Often we want Shiny applications to carry out complex statistical logic on behalf of users and display some business outcome or aggregated summary to users. However our objective was to showcase this statistical logic!
 
 ## Randomisation {background-image="Slides/main.PNG" background-size="contain"}
 
@@ -433,13 +439,13 @@ Added a button so the user required to explicitly had carry out randomisation.
 
 ::: columns
 ::: {.column width="60%"}
+{{< video video/Randomisation.mp4 width="600">}}
 :::
 
 ::: {.column width="40%"}
 -   HTML and CSS
 -   Info cards
 -   `reactivePoll`& ggplot2 📦
-    -   Consider empty state!
 :::
 :::
 
@@ -449,45 +455,32 @@ Initial designs and experiments required manual data entry which caused some iss
 
 -   Data Governance
     -   Privacy by design
--   Validation[^4]
+-   Validation[^3]
 -   Editing incorrect data
 
-[^4]: 📦 shinyvalidate
+[^3]: 📦 shinyvalidate
 
 ## Self-serving data capture
 
-## Data Literacy {background-image="Slides/main.PNG" background-size="contain"}
+::: columns
+::: {.column width="60%"}
+{{< video video/Timer.mp4 width="600">}}
+:::
 
--   National Curriculum
--   Canvass Expert Opinion
--   Monitor existing users
+::: {.column width="40%"}
+-   `ReactiveVal` & `InvalidateLater`
+    -   Custom CSS
+-   Reset State
+    -   OOP (R6)
+-   Custom JavaScript
+:::
+:::
 
-## Which Visualisations?
+## Which Visualisations? {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
 ::: {.column width="50%"}
-```{r }
-library(ggplot2)
-library(palmerpenguins)
-
-ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
-  geom_boxplot() +
-  labs(title = "Boxplot of Flipper Length by Penguin Species",
-       x = "Species",
-       y = "Flipper Length (mm)") +
-  theme_minimal() +
-  scale_fill_manual(values = c(
-    "Adelie" = "#18213B",
-    "Chinstrap" = "#89D8C1",
-    "Gentoo" = "#CD8581"
-  )) +
-  coord_flip()
-```
-
-Aligned with curriculum and classroom learning.
-:::
-
-::: {.column width="50%"}
+::: fragment
 ```{r }
 library(ggplot2)
 library(palmerpenguins)
@@ -511,92 +504,54 @@ Tempted... but looks like abstract art to the uninitiated.
 :::
 :::
 
-# Accessibilty
+::: {.column width="50%"}
+::: fragment
+```{r }
+library(ggplot2)
+library(palmerpenguins)
 
-## Dealing with Changing Requirements {background-image="Slides/main.PNG" background-size="contain"}
-
-::: columns
-::: {.column width="40%"}
-<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
-
-</iframe>
-
-<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
-:::
-
-::: {.column width="60%"}
--   Ask questions to understand the problem not to 'gather requirements'
--   Write 'production ready' code early
-    -   Modularise code
-    -   Test Code
--   Are your processes scalable?
-    -   Deployment
-    -   On-boarding Users
-    -   Changes (internal and external)
-:::
-:::
-
-# What is Production?
-
-## What is Production?[^5] {background-image="Slides/main.PNG" background-size="contain"}
-
-[^5]: https://engineering-shiny.org/#what-is-production
-
--   It is [used]{.highlight}, even if only by one person.
--   It is [relied upon]{.highlight} by its user(s).
--   It has [real life impact]{.highlight} if something goes wrong.
-
-::: aside
-Definition taken from:
-:::
-
-## Constraints {background-image="Slides/main.PNG" background-size="contain"}
-
--   [Time:]{.highlight} Volunteers with no fixed.
--   [Resources:]{.highlight} No defined budget.
--   [Governance:]{.highlight} Commercial Conflicts & GDPR.
--   [Logistical:]{.highlight} Deployment model.
--   [Known Unknowns:]{.highlight} Different class sizes, equipment, levels of engagement.
-
-## Interactivity
-
--   Why include interactivity elements to visualisations?
-    -   Reinforce learning
-    -   Increase classroom engagement
-    -   Display technological proficiency
-    -   Generational shift in expectations from digital natives
-
-# Technicial Challenages {.section-title background-image="Slides/section5.PNG" background-size="contain"}
-
-## Persistent Storage {background-image="Slides/main.PNG" background-size="contain"}
-
-```{mermaid}
-graph TD
-    A[User 1 - Laptop <i class="fa fa-laptop"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
-    C[User 2 - Smartphone <i class="fa fa-mobile"></i>] -->|Access via App| B(Application Server <i class="fa fa-server"></i>)
-    D[User 3 - Tablet <i class="fa fa-tablet"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
-    B --> E[Shared Database <i class="fa fa-database"></i>]
+ggplot(penguins, aes(x = species, y = flipper_length_mm, fill = species)) +
+  geom_boxplot() +
+  labs(title = "Boxplot of Flipper Length by Penguin Species",
+       x = "Species",
+       y = "Flipper Length (mm)") +
+  theme_minimal() +
+  scale_fill_manual(values = c(
+    "Adelie" = "#18213B",
+    "Chinstrap" = "#89D8C1",
+    "Gentoo" = "#CD8581"
+  )) +
+  coord_flip()
 ```
 
-# Lessons Learnt {.section-title background-image="Slides/section1.PNG" background-size="contain"}
-
-## Agile {auto-animate="true" auto-animate-easing="ease-in-out" visibility="uncounted" background-image="Slides/main.PNG" background-size="contain"}
-
-::: callout-note
-## Agile Principle #2
-
-Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+Aligned with curriculum and classroom learning.
+:::
+:::
 :::
 
-## Agile {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+## Dynamic Feedback {background-image="Slides/main.PNG" background-size="contain"}
 
-::: callout-warning
-## Agile Principle #2
-
-Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
+::: columns
+::: {.column width="60%"}
+{{< video video/Boxplot_Feedback.mp4 width="600">}}
 :::
 
-By failing to prepare for change and you're preparing to fail.
+::: {.column width="40%"}
+-   Data Exploration
+-   Real-time feedback
+-   Gameification
+-   Aligned with practical example
+-   Generated discussion on outlines
+:::
+:::
+
+\#[WATCH OUT FOR EMPTY STATE]{.highlight}
+
+## Panic!
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/ApplicationState.jpg');"}
+[My prototype is about to be used as a live application]{.white-text}
+:::
 
 ## Pareto Principle {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
@@ -651,47 +606,155 @@ Actual time/effort to completion
 :::
 
 ::: {.column width="40%"}
-<div>
-
 ::: callout-warning
-The expectation from external stakeholders is there's 20% of the effort to completion when there's 80% left. So be sure to manage these expectations!!
+80% work includes: -
+
+-   [Application State]{.highlight}
+
+-   Responsiveness
+
+-   Edge Cases
+
+-   Scalability
+
+-   Accessibility
+
+-   Security
+
+-   Documentation
+
+-   Deployment
+:::
+:::
 :::
 
-</div>
+# Walkthrough
+
+## Application
+
+<iframe src="http://127.0.0.1:4553/" width="100%" height="600px" frameborder="0">
+
+</iframe>
+
+## Success!
+
+::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/StMacStroop.jpeg');"}
+[Returning to school to give a successful demonstration!]{.white-text}
 :::
-:::
-
-# 
-
-::: {data-id="scope" auto-animate-delay="0" style="background: #89D8C1;  width: 900px; height: 500px; text-align: center; background-size: cover; background-image:'img/Stroopfeedback.png'"}
-My prototype is about to be used as a live application
-:::
-
-## 
-
-![](img/StMacStroop.jpeg)
 
 ## Project Update {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
-::: {.column width="40%"}
--   [Interactive Learning:]{.highlight}\
--   [Data Literacy:]{.highlight}
+::: column
+-   [Interactive Learning:]{.highlight}
 -   [Showcase:]{.highlight}
--   [Fun & Engaging]{.highlight}
 :::
 
-::: {.column width="60%"}
-![](img/Stroop_feedback.png)
+::: column
+-   [Data Literacy:]{.highlight}
+-   [Fun & Engaging]{.highlight}
 :::
 :::
+
+![](img/Stroop_feedback.png){.centre width="750"}
 
 ## How you can contribute {background-image="Slides/main.PNG" background-size="contain"}
 
-Ask questions! - Provide feedback - Promote STEM to the next generation - Join the team of volunteers!
+::: fragment
+❓Ask questions!
+:::
+
+::: fragment
+🗣️ Provide feedback
+:::
+
+::: fragment
+👩‍🔬 Promote STEM to the next generation
+:::
+
+::: fragment
+🧑‍🤝‍🧑 Join the team of volunteers!
+:::
 
 ## Resources {background-image="Slides/main.PNG" background-size="contain"}
 
 🌐 [PSI Schools Outreach](https://psiweb.org/careers/outreach/schools-outreach)
 
 👩‍🏫 [Jumping Rivers Accessibility](https://www.jumpingrivers.com/training/course/web-accessibility-in-shiny/)
+
+# Additional Slides not presented
+
+## Non-technical Factors {background-image="Slides/main.PNG" background-size="contain"}
+
+In danger of being technology-led so needed to ensure we considered a holistic solution
+
+-   [Physical Environment]{.highlight}
+-   [Equipment]{.highlight}
+-   [Format]{.highlight}
+-   [Technological & Data literacy]{.highlight}
+-   [Usage Duration]{.highlight}
+
+# Lessons Learnt {.section-title background-image="Slides/section1.PNG" background-size="contain"}
+
+# What is Production?
+
+## What is Production?[^4] {background-image="Slides/main.PNG" background-size="contain"}
+
+[^4]: https://engineering-shiny.org/#what-is-production
+
+-   It is [used]{.highlight}, even if only by one person.
+-   It is [relied upon]{.highlight} by its user(s).
+-   It has [real life impact]{.highlight} if something goes wrong.
+
+::: aside
+Definition taken from:
+:::
+
+## Constraints {background-image="Slides/main.PNG" background-size="contain"}
+
+-   [Time:]{.highlight} Volunteers with no fixed.
+-   [Resources:]{.highlight} No defined budget.
+-   [Governance:]{.highlight} Commercial Conflicts & GDPR.
+-   [Logistical:]{.highlight} Deployment model.
+-   [Known Unknowns:]{.highlight} Different class sizes, equipment, levels of engagement.
+
+# Technicial Challenages {.section-title background-image="Slides/section5.PNG" background-size="contain"}
+
+## Persistent Storage {background-image="Slides/main.PNG" background-size="contain"}
+
+```{mermaid}
+graph TD
+    A[User 1 - Laptop <i class="fa fa-laptop"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
+    C[User 2 - Smartphone <i class="fa fa-mobile"></i>] -->|Access via App| B(Application Server <i class="fa fa-server"></i>)
+    D[User 3 - Tablet <i class="fa fa-tablet"></i>] -->|Access via Browser| B(Application Server <i class="fa fa-server"></i>)
+    B --> E[Shared Database <i class="fa fa-database"></i>]
+```
+
+## Data Literacy {background-image="Slides/main.PNG" background-size="contain"}
+
+-   National Curriculum
+-   Canvass Expert Opinion
+-   Monitor existing users
+
+## Dealing with Changing Requirements {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+<iframe src="https://giphy.com/embed/l2JebTEN4vhI1hWSY" width="480" height="362" style frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/season-5-the-simpsons-5x11-l2JebTEN4vhI1hWSY">via GIPHY</a></p>
+:::
+
+::: {.column width="60%"}
+-   Ask questions to understand the problem not to 'gather requirements'
+-   Write 'production ready' code early
+    -   Modularise code
+    -   Test Code
+-   Are your processes scalable?
+    -   Deployment
+    -   On-boarding Users
+    -   Changes (internal and external)
+:::
+:::

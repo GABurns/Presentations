@@ -32,6 +32,10 @@ $presentation-heading-font: 'Questrial';
   font-weight: bold;
 }
 
+.white-text {
+  color: white;
+}
+
 .reveal h2 {
   margin: 0 0 60px 0;
 }
@@ -44,8 +48,6 @@ $presentation-heading-font: 'Questrial';
 .reveal ul li::marker  {
   color: $exploristics-coral;
 }
-
-
 
 
 
@@ -108,7 +110,7 @@ $presentation-heading-font: 'Questrial';
 .classroom-image {
   width: 400px;
   height: 400px;
-  background-image: url("https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?cs=srgb&dl=pexels-pixabay-256395.jpg&fm=jpg");
+  background-image: url("https://www.responsiveclassroom.org/wp-content/uploads/2016/04/DSC_2388-1024x682.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
