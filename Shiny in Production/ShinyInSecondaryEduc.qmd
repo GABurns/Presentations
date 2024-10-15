@@ -9,6 +9,7 @@ format:
       data-background-image: Slides/title.PNG
       data-background-size: contain
     slide-number: true
+    embed-resources: true
     theme: [default, custom.scss]
     toc: false
     incremental: true
@@ -41,9 +42,9 @@ preload-iframes: true
             <h2>Gareth Burns</h2>
             <p>Data Scientist, Exploristics</p>
             <div class="social">
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/GABurns"><i class="fa fa-github" target="_blank"></i></a>
+                <a href="https://x.com/GarethBurns4"><i class="fa fa-twitter" target="_blank"></i></a>
+                <a href="https://www.linkedin.com/in/drgarethburns/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -61,7 +62,7 @@ preload-iframes: true
 :::
 
 ::: fragment
-✏️ Create for a cloud-based clinical-trial simulation SaaS application
+✏️ Develop [KerusCloud](https://exploristics.com/keruscloud-platform-overview/): a cloud-based clinical-trial simulation SaaS application
 :::
 
 ::: fragment
@@ -77,6 +78,7 @@ preload-iframes: true
 -   Promoting opportunities in pharmaceutical/ healthcare industry
 -   Sharing working with data and use of numeracy skills in industry
 -   Encouraging relevant STEM studies to inspire NextGen into industry
+-   [PSI Schools Outreach](https://psiweb.org/careers/outreach/schools-outreach) 🔗
 :::
 
 ::: {.column width="40%"}
@@ -104,7 +106,7 @@ preload-iframes: true
             <h2>Steve Mallett</h2>
             <p>Senior Manager, Veramed</p>
             <div class="social">
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/steve-mallett-a1650712/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -131,8 +133,8 @@ preload-iframes: true
             <h2>Alex Spiers</h2>
             <p>Principal Statistician, GSK</p>
             <div class="social">
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/statneutrino"><i class="fa fa-github" target="_blank"></i></a>
+                <a href="https://www.linkedin.com/in/alex-spiers/"><i class="fa fa-linkedin" target="_blank"></i></a>
             </div>
         </div>
     </div>
@@ -159,9 +161,7 @@ preload-iframes: true
             <h2>Katie Gwinnell</h2>
             <p>Placement Student, Bayer</p>
             <div class="social">
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/katie-gwinnell-aa90751b1/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -192,7 +192,7 @@ preload-iframes: true
             <h2>Emma Crawford</h2>
             <p>Statistician, PSI</p>
             <div class="social">
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/emmaleecrawford/" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -219,8 +219,7 @@ preload-iframes: true
             <h2>My Luong Vuong</h2>
             <p>Statistician, Kuleuven</p>
             <div class="social">
-                <a href="#"><i class="fa fa-github"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/my-luong-v-3a7161a3/"target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -452,7 +451,7 @@ Added a button so the user required to explicitly had carry out randomisation.
 
 ::: columns
 ::: {.column width="60%"}
-{{< video video/Randomisation.mp4 width="600">}}
+![](video/Randomisation.mp4){.absolute width="600"} <!-- {{< video video/Randomisation.mp4 width="600">}} -->
 :::
 
 ::: {.column width="40%"}
@@ -479,7 +478,7 @@ Initial designs and experiments required manual data entry which caused some iss
 
 ::: columns
 ::: {.column width="60%"}
-{{< video video/Timer.mp4 width="600">}}
+![](video/Timer.mp4){.absolute width="600"} <!-- {{< video video/Timer.mp4 width="600">}} -->
 :::
 
 ::: {.column width="40%"}
@@ -547,7 +546,7 @@ Aligned with curriculum and classroom learning.
 
 ::: columns
 ::: {.column width="60%"}
-{{< video video/Boxplot_Feedback.mp4 width="600">}}
+![](video/Boxplot_Feedback.mp4){width="600"} <!-- {{< video video/Boxplot_Feedback.mp4 width="600">}} -->
 :::
 
 ::: {.column width="40%"}
@@ -635,10 +634,10 @@ Actual time/effort to completion
 ::: callout-note
 ## Walkthrough
 
-This slide was an iframe of the application deployed locally. Check out the Jumping Rivers channel for a walk-through.
+This slide was an iframe of the application deployed locally. Check out the [Jumping Rivers YouTube channel](https://www.youtube.com/channel/UCQMSMvzGNuUwHq6W6zlZq_A) for a walk-through.
 :::
 
-##
+## 
 
 ::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/StMacStroop.jpeg');"}
 [Returning to school to give a successful demonstration!]{.white-text}
