@@ -300,7 +300,7 @@ Stroop Test with cross-over design
 
 ## Changing Requirements {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
 
-::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/ApplicationState.jpg');"}
+::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('https://github.com/GABurns/Presentations/blob/master/Shiny%20in%20Production/img/ApplicationState.jpg?raw=true');"}
 [The application is broke 2 hours before I've to use it with students]{.white-text}
 :::
 
@@ -562,7 +562,7 @@ Aligned with curriculum and classroom learning.
 
 ## Panic!
 
-::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('img/ApplicationState.jpg');"}
+::: {data-id="scope" auto-animate-delay="0" style="background: #FFFFFF;  width: 900px; height: 500px; text-align: center; background-size: cover;  background-position: center; margin: auto; display: block; background-image:url('https://github.com/GABurns/Presentations/blob/master/Shiny%20in%20Production/img/ApplicationState.jpg?raw=true');"}
 [My prototype is about to be used as a live application]{.white-text}
 :::
 
