@@ -1,0 +1,179 @@
+/*-- scss:defaults --*/
+
+$exploristics-darkblue: #18213B;
+$exploristics-lightblue: #718BDE;
+$exploristics-paleblue:#A4B8DC;
+$exploristics-coral: #CD8581;
+$exploristics-green:#89D8C1;
+$exploristics-white:#fff;
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+$body-color: $exploristics-darkblue;
+$link-color: $exploristics-lightblue;
+$presentation-heading-color: $exploristics-darkblue;
+$code-block-bg:	$exploristics-paleblue;
+$code-block-border-color:	lighten($body-color, 10%);
+$presentation-title-slide-text-align: left;
+
+$font-family-sans-serif: 'Questrial', sans-serif;
+$presentation-heading-font: 'Questrial';
+
+/*-- scss:rules --*/
+
+/* Change title slide text color */
+.title, .subtitle, .quarto-title-author-name, .quarto-title-affiliation {
+  color: $exploristics-white !important;
+}
+
+/* Change highlighted text color */
+.highlight {
+  color: $exploristics-coral !important;
+  font-weight: bold;
+}
+
+.white-text {
+  color: white;
+}
+
+.reveal h2 {
+  margin: 0 0 60px 0;
+}
+
+.section-title{
+  text-align: right;
+}
+
+/* Change the bullet point color */
+.reveal ul li::marker  {
+  color: $exploristics-coral;
+}
+
+
+/* Profile Card CSS */
+.profile-card {
+            background: $exploristics-coral;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Ensure the image covers the element */
+            margin-top: 20px;
+        }
+
+        .profile-card .profile-content {
+            padding: 20px;
+        }
+
+        .profile-card .profile-content h2 {
+            margin: 0;
+            color: $exploristics-darkblue;
+            font-size: 36px;
+        }
+
+        .profile-card .profile-content p {
+            color: $exploristics-white;
+            margin: 10px 0 20px;
+            font-size: 24px;
+        }
+
+        .profile-card .profile-content .social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .profile-card .profile-content .social a {
+            color: $exploristics-darkblue;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .profile-card .profile-content .social a:hover {
+            color: #000;
+        }
+
+.custom-box {
+  background: $exploristics-darkblue;
+  width: 140px;
+  height: 100px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.custom-box-end {
+  background: $exploristics-green;
+  width: 20px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.box {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 175px;
+    z-index: 1;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .semi-arrow {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #4CAF50;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .semi-arrow.top {
+    border-bottom: none;
+    transform: rotate(180deg);
+  }
+
+  .semi-arrow.bottom {
+    border-top: none;
+    transform: none;
+  }
+
+  .fragment {
+    display: inline-block;
+    opacity: 0; /* Hide by default, Reveal.js will handle showing them incrementally */
+  }
+
+.value-box {
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+
+
+
+
