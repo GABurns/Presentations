@@ -382,10 +382,10 @@ Kimberley Hacquoil
 
 </div><div class="column" style="width:60%;">
 <div class="fragment">
-<p>🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥</p>
+<p>🧑‍💼️ Worked in a wide range of industries using R to inform policy decision at regional, national and international level 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥</p>
 </div>
 <div class="fragment">
-<p>✏️ Devel KerusCloud, a cloud-based clinical-trial simulation tool. application</p>
+<p>✏️ Developer of KerusCloud, a cloud-based clinical-trial simulation tool.</p>
 </div>
 <div class="fragment">
 <p>📢 Passionate about Scientific Communication</p>
@@ -453,16 +453,25 @@ Kimberley Hacquoil
 <p><img data-src="img/Exploristics-Logo-RGB.png" class="quarto-figure quarto-figure-center" width="700"></p>
 </figure>
 </div>
-<div class="column" style="width:50%;">
-
-</div>
-<p>:::</p>
+</section>
+<section id="example-project" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Example Project</h2>
+<ul>
+<li class="fragment"><p>Vaccine trial, across several countries, low-incidence rate - so need to recruit large number of patients across multiple countries.</p></li>
+<li class="fragment"><p>Create simulated Virtual Populations using KerusCloud with <span class="highlight">recruitment sites</span> in 4 different countries, <span class="highlight">baseline patient data</span> and <span class="highlight">repeated measure</span> &amp; <span class="highlight">time to event</span> variables of disease occurrence.</p></li>
+</ul>
 </section>
 <section id="workflow" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Workflow</h2>
 <div style="display: flex; justify-content: space-between; align-items: center;">
 <div class="box fragment">
-<p>Data Wrangling</p>
+<p>Research &amp; Data Wrangling</p>
+</div>
+<div class="arrow fragment">
+<p>→</p>
+</div>
+<div class="box fragment">
+<p>Simulation</p>
 </div>
 <div class="arrow fragment">
 <p>→</p>
@@ -474,24 +483,13 @@ Kimberley Hacquoil
 <p>→</p>
 </div>
 <div class="box fragment">
-<p>Analysis/ Modeling</p>
-</div>
-<div class="arrow fragment">
-<p>→</p>
-</div>
-<div class="box fragment">
-<p>Data Viz</p>
-</div>
-<div class="arrow fragment">
-<p>→</p>
-</div>
-<div class="box fragment">
-<p>Reporting</p>
+<p>Data Viz &amp;<br>
+Reporting</p>
 </div>
 </div>
 <ul>
 <li class="fragment">Data workflow is often visualized as linear but iterations occur at each stage.</li>
-<li class="fragment">Streamlining these micro-iterations can lead to <span class="highlight">efficiency</span> gains and <span class="highlight">better experience</span>.</li>
+<li class="fragment">Streamlining these micro-iterations can lead to <span class="highlight">efficiency</span> gains and a <span class="highlight">better experience</span>.</li>
 </ul>
 </section></section>
 <section>
@@ -537,8 +535,8 @@ Kimberley Hacquoil
 </div>
 </div>
 </section>
-<section id="create-realistic-virtual-population" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
-<h2>Create Realistic Virtual Population</h2>
+<section id="create-realistic-virtual-populations" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
+<h2>Create Realistic Virtual Populations</h2>
 <p>Create realistic virtual population data with up to <span class="highlight">20,000 patients</span>, <span class="highlight">10,000 simulations</span> and over <span class="highlight">250,000 scenarios</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -546,14 +544,14 @@ Kimberley Hacquoil
 <div class="callout-body">
 <div class="callout-content">
 <p><span class="highlight">Baseline and Endpoints</span></p>
+<p>17 different variable types including:</p>
 <ul>
-<li class="fragment"><p>12 different variable types</p>
-<ul>
-<li class="fragment">Time to event</li>
-<li class="fragment">Irreversible events</li>
-<li class="fragment">Repeated Measures</li>
-</ul></li>
-<li class="fragment"><p>Correlated Data</p></li>
+<li class="fragment"><p>Continuous and Discrete<span style="color:white;">———-</span></p></li>
+<li class="fragment"><p>Time to event <span style="color:white;">———-</span></p></li>
+<li class="fragment"><p>Irreversible events<span style="color:white;">———-</span></p></li>
+<li class="fragment"><p>Repeated Measures <span style="color:white;">———-</span><br>
+</p></li>
+<li class="fragment"><p><strong>Correlated Data</strong></p></li>
 </ul>
 </div>
 </div>
@@ -563,13 +561,12 @@ Kimberley Hacquoil
 <div class="callout-body">
 <div class="callout-content">
 <p><span class="highlight">Realistic Data</span></p>
+<p>6 difference advanced options:</p>
 <ul>
-<li class="fragment"><p>Advanced Options</p>
-<ul>
-<li class="fragment">Missingness</li>
-<li class="fragment">Trunction</li>
-</ul></li>
-<li class="fragment"><p>Estimands</p></li>
+<li class="fragment">Missingness <span style="color:white;">———-</span></li>
+<li class="fragment">Trunction<span style="color:white;">————–</span></li>
+<li class="fragment">Accuracy<span style="color:white;">—————</span></li>
+<li class="fragment">Apply <span class="highlight">Estimands</span> to handle missing data</li>
 </ul>
 </div>
 </div>
@@ -584,28 +581,33 @@ Kimberley Hacquoil
 <p>Conventional approaches to clinical trial design often neglect logistical issues, such as <span class="highlight">recruiting patients</span>.</p>
 </div>
 <div class="fragment">
-<p>KerusCloud allows you recruit patients from up to <span class="highlight">10 sites</span>.</p>
+<p>KerusCloud allows you recruit patients from up to<br>
+<span class="highlight">10 sites</span>.</p>
 </div>
 </section>
 <section id="patient-recruitment-1" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Patient Recruitment</h2>
-<p><img data-src="img/Recruitment Profile 3.png" class="r-stretch" style="text-align: center;"> :::fragment KerusCloud allows you to <span class="highlight">modify recruitment rates</span> between <span class="highlight">sites</span> and over <span class="highlight">time</span>. :::</p>
-</section></section>
-<section>
-<section id="challenage" class="title-slide slide level1 center" data-background-image="Slides/section2.PNG" data-background-size="contain">
-<h1>Challenage</h1>
-
-</section>
-<section id="example-project" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
-<h2>Example Project</h2>
+<img data-src="img/Recruitment Profile 3.png" class="r-stretch" style="text-align: center;">
 <ul>
-<li class="fragment"><p>Low-incidence rate, across several countries to test vaccine - so need to recruit large number of patients across multiple countries.</p></li>
-<li class="fragment"><p>Create a KerusCloud Virtual Population with <span class="highlight">recruitment sites</span> in 4 different countries, <span class="highlight">baseline patient data</span> and <span class="highlight">time to event</span> variable of disease occurrence.</p></li>
-<li class="fragment"><p><span class="highlight">How do I handle these complex data?</span></p></li>
+<li class="fragment">KerusCloud allows you to <span class="highlight">modify recruitment rates</span> between <span class="highlight">sites</span> and over <span class="highlight">time</span>.</li>
 </ul>
 </section></section>
+<section id="section-2" class="title-slide slide level1 center" data-background-image="Slides/section1.PNG" data-background-size="contain">
+<h1></h1>
+<div class="columns">
+<div class="column" style="width:60%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Challenge</strong></p>
+<ul>
+<li class="fragment"><span class="highlight">How do I visualise these complex data?</span></li>
+</ul>
+</div>
+</div>
+</section>
+
 <section>
-<section id="section-2" class="title-slide slide level1 center" data-background-iframe="iframe/index.html">
+<section id="section-3" class="title-slide slide level1 center" data-background-iframe="iframe/index.html">
 <h1></h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -613,18 +615,37 @@ Kimberley Hacquoil
 </figure>
 </div>
 </section>
-<section id="create-the-plots-you-think-of" class="slide level2">
+<section id="create-the-plots-you-think-of" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Create the plots you think of!</h2>
-<ul>
-<li class="fragment"><p>Extension of Esquisse functionality.</p></li>
-<li class="fragment"><p>Real-time updating of data vizualisations.</p></li>
-<li class="fragment"><p>Organisational theme applied.</p></li>
-</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p>Organisational theme applied as R package 📦</p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p>Extension of <a href="https://dreamrs.github.io/esquisse/index.html">Esquisse</a> functionality</p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p>Real-time updating of data vizualisations</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<div class="fragment fade-out" data-fragment-index="2">
+<p><img data-src="https://github.com/Exploristics/ExploristicsTheme/blob/main/man/figures/hex-ExploristicsTheme.png?raw=true" class="absolute" style="top: 150px; right: 50px; width: 400px; "></p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p><img data-src="https://github.com/dreamRs/esquisse/blob/master/man/figures/logo.png?raw=true" class="absolute" style="top: 150px; right: 50px; width: 400px; "></p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="walk-through" class="title-slide slide level1 center" data-background-image="Slides/main.PNG" data-background-size="contain">
-<h1>Walk Through</h1>
-
+<h1>Walk-through</h1>
+<!-- ## Application -->
+<!-- <iframe src="http://127.0.0.1:4553/" width="100%" height="600px" frameborder="0"> -->
+<!-- </iframe> -->
 </section>
 <section id="benefits" class="slide level2" data-background-image="Slides/main.PNG" data-background-size="contain">
 <h2>Benefits</h2>
@@ -632,7 +653,7 @@ Kimberley Hacquoil
 <li class="fragment"><p>Exploratory Data Analysis</p></li>
 <li class="fragment"><p>Sense check the inputs are correct</p></li>
 <li class="fragment"><p>Display complex data to non-technical audience</p></li>
-<li class="fragment"><p>Data Storytelling</p></li>
+<li class="fragment"><p>Data Storytelling <span style="color:white;">—————————–</span></p></li>
 <li class="fragment"><p>Streamline reporting</p></li>
 </ul>
 </section>
@@ -884,7 +905,7 @@ Kimberley Hacquoil
 </ul>
 </div>
 </section></section>
-<section id="section-3" class="title-slide slide level1 center" data-background-iframe="iframe/index.html">
+<section id="section-4" class="title-slide slide level1 center" data-background-iframe="iframe/index.html">
 <h1></h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>

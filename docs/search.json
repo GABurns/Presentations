@@ -4,7 +4,7 @@
     "href": "EffectiveStatistician.html#about-me",
     "title": "Virtual Population Visualisation",
     "section": "About Me",
-    "text": "About Me\n\n\n\n\n    \n    \n    Profile Card\n    \n\n\n    \n        \n        \n            Gareth Burns\n            Data Scientist, Exploristics\n            \n                \n                \n                \n            \n        \n    \n    \n    \n\n\n\n\n🧑‍💼️ Worked in a wide range of industries using R to make data-driven decisions 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥\n\n\n✏️ Devel KerusCloud, a cloud-based clinical-trial simulation tool. application\n\n\n📢 Passionate about Scientific Communication"
+    "text": "About Me\n\n\n\n\n    \n    \n    Profile Card\n    \n\n\n    \n        \n        \n            Gareth Burns\n            Data Scientist, Exploristics\n            \n                \n                \n                \n            \n        \n    \n    \n    \n\n\n\n\n🧑‍💼️ Worked in a wide range of industries using R to inform policy decision at regional, national and international level 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥\n\n\n✏️ Developer of KerusCloud, a cloud-based clinical-trial simulation tool.\n\n\n📢 Passionate about Scientific Communication"
   },
   {
     "objectID": "EffectiveStatistician.html#co-authors",
@@ -14,11 +14,18 @@
     "text": "Co-authors\n\n\n\n\n    \n    \n    Profile Card\n    \n\n\n    \n        \n        \n            Amy McCorry\n            Consultant Data Scientist, Exploristics\n            \n                \n            \n        \n    \n    \n    \n\n\n\n\n\n    \n    \n    Profile Card\n    \n\n\n    \n        \n        \n            Kimberley Hacquoil\n            Chief Data Scientific Officer, Exploristics"
   },
   {
+    "objectID": "EffectiveStatistician.html#example-project",
+    "href": "EffectiveStatistician.html#example-project",
+    "title": "Virtual Population Visualisation",
+    "section": "Example Project",
+    "text": "Example Project\n\nVaccine trial, across several countries, low-incidence rate - so need to recruit large number of patients across multiple countries.\nCreate simulated Virtual Populations using KerusCloud with recruitment sites in 4 different countries, baseline patient data and repeated measure & time to event variables of disease occurrence."
+  },
+  {
     "objectID": "EffectiveStatistician.html#workflow",
     "href": "EffectiveStatistician.html#workflow",
     "title": "Virtual Population Visualisation",
     "section": "Workflow",
-    "text": "Workflow\n\n\nData Wrangling\n\n\n→\n\n\nEDA\n\n\n→\n\n\nAnalysis/ Modeling\n\n\n→\n\n\nData Viz\n\n\n→\n\n\nReporting\n\n\n\nData workflow is often visualized as linear but iterations occur at each stage.\nStreamlining these micro-iterations can lead to efficiency gains and better experience."
+    "text": "Workflow\n\n\nResearch & Data Wrangling\n\n\n→\n\n\nSimulation\n\n\n→\n\n\nEDA\n\n\n→\n\n\nData Viz &\nReporting\n\n\n\nData workflow is often visualized as linear but iterations occur at each stage.\nStreamlining these micro-iterations can lead to efficiency gains and a better experience."
   },
   {
     "objectID": "EffectiveStatistician.html#simulated-data",
@@ -35,46 +42,39 @@
     "text": "Simulated Data\n\n\n\n\n\nFemale\nMean: 150 SD: 4\n\n\nMale\nMean: 165 SD: 4"
   },
   {
-    "objectID": "EffectiveStatistician.html#create-realistic-virtual-population",
-    "href": "EffectiveStatistician.html#create-realistic-virtual-population",
+    "objectID": "EffectiveStatistician.html#create-realistic-virtual-populations",
+    "href": "EffectiveStatistician.html#create-realistic-virtual-populations",
     "title": "Virtual Population Visualisation",
-    "section": "Create Realistic Virtual Population",
-    "text": "Create Realistic Virtual Population\nCreate realistic virtual population data with up to 20,000 patients, 10,000 simulations and over 250,000 scenarios\n\n\n\n\n\nBaseline and Endpoints\n\n12 different variable types\n\nTime to event\nIrreversible events\nRepeated Measures\n\nCorrelated Data\n\n\n\n\n\n\n\n\nRealistic Data\n\nAdvanced Options\n\nMissingness\nTrunction\n\nEstimands"
+    "section": "Create Realistic Virtual Populations",
+    "text": "Create Realistic Virtual Populations\nCreate realistic virtual population data with up to 20,000 patients, 10,000 simulations and over 250,000 scenarios\n\n\n\n\n\nBaseline and Endpoints\n17 different variable types including:\n\nContinuous and Discrete———-\nTime to event ———-\nIrreversible events———-\nRepeated Measures ———-\n\nCorrelated Data\n\n\n\n\n\n\n\n\nRealistic Data\n6 difference advanced options:\n\nMissingness ———-\nTrunction————–\nAccuracy—————\nApply Estimands to handle missing data"
   },
   {
     "objectID": "EffectiveStatistician.html#patient-recruitment",
     "href": "EffectiveStatistician.html#patient-recruitment",
     "title": "Virtual Population Visualisation",
     "section": "Patient Recruitment",
-    "text": "Patient Recruitment\n\n\nConventional approaches to clinical trial design often neglect logistical issues, such as recruiting patients.\n\n\nKerusCloud allows you recruit patients from up to 10 sites."
+    "text": "Patient Recruitment\n\n\nConventional approaches to clinical trial design often neglect logistical issues, such as recruiting patients.\n\n\nKerusCloud allows you recruit patients from up to\n10 sites."
   },
   {
     "objectID": "EffectiveStatistician.html#patient-recruitment-1",
     "href": "EffectiveStatistician.html#patient-recruitment-1",
     "title": "Virtual Population Visualisation",
     "section": "Patient Recruitment",
-    "text": "Patient Recruitment\n :::fragment KerusCloud allows you to modify recruitment rates between sites and over time. :::"
-  },
-  {
-    "objectID": "EffectiveStatistician.html#example-project",
-    "href": "EffectiveStatistician.html#example-project",
-    "title": "Virtual Population Visualisation",
-    "section": "Example Project",
-    "text": "Example Project\n\nLow-incidence rate, across several countries to test vaccine - so need to recruit large number of patients across multiple countries.\nCreate a KerusCloud Virtual Population with recruitment sites in 4 different countries, baseline patient data and time to event variable of disease occurrence.\nHow do I handle these complex data?"
+    "text": "Patient Recruitment\n\n\nKerusCloud allows you to modify recruitment rates between sites and over time."
   },
   {
     "objectID": "EffectiveStatistician.html#create-the-plots-you-think-of",
     "href": "EffectiveStatistician.html#create-the-plots-you-think-of",
     "title": "Virtual Population Visualisation",
     "section": "Create the plots you think of!",
-    "text": "Create the plots you think of!\n\nExtension of Esquisse functionality.\nReal-time updating of data vizualisations.\nOrganisational theme applied."
+    "text": "Create the plots you think of!\n\n\n\nOrganisational theme applied as R package 📦\n\n\nExtension of Esquisse functionality\n\n\nReal-time updating of data vizualisations"
   },
   {
     "objectID": "EffectiveStatistician.html#benefits",
     "href": "EffectiveStatistician.html#benefits",
     "title": "Virtual Population Visualisation",
     "section": "Benefits",
-    "text": "Benefits\n\nExploratory Data Analysis\nSense check the inputs are correct\nDisplay complex data to non-technical audience\nData Storytelling\nStreamline reporting"
+    "text": "Benefits\n\nExploratory Data Analysis\nSense check the inputs are correct\nDisplay complex data to non-technical audience\nData Storytelling —————————–\nStreamline reporting"
   },
   {
     "objectID": "EffectiveStatistician.html#efficiency-gains",
