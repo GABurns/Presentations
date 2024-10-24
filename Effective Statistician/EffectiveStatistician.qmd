@@ -1,0 +1,628 @@
+---
+title: "Virtual Population Visualisation"
+subtitle: "Streamlining data exploration and reporting for enhanced consistency, efficiency, and visual clarity."
+date:  "November 2024"
+author:
+  - name: Gareth Burns
+    attributes:
+      corresponding: true
+  - name: Amy McCorry
+  - name: Kimberley Hacquoil
+format: 
+  revealjs:
+    title-slide-attributes: 
+      data-background-image: Slides/title.PNG
+      data-background-size: contain
+    slide-number: true
+    theme: [default, custom.scss]
+    toc: false
+    incremental: true
+    transition: fade
+    background-transition: fade
+    auto-stretch: false
+    auto-animate: true
+execute:
+  echo: false
+editor: visual
+---
+
+## About Me {transition="convex-in none-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/profile.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Gareth Burns</h2>
+            <p>Data Scientist, Exploristics</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+
+::: {.column width="60%"}
+::: fragment
+🧑‍💼️ Worked in a wide range of industries using R to inform policy decision at regional, national and international level 🦡 🌿 🌾 🏥 🤖 🐟 🛥️ 🏥
+:::
+
+::: fragment
+✏️ Developer of KerusCloud, a cloud-based clinical-trial simulation tool.
+:::
+
+::: fragment
+📢 Passionate about Scientific Communication
+:::
+:::
+:::
+
+## Co-authors {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="40%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/amy.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Amy McCorry</h2>
+            <p>Consultant Data Scientist, Exploristics</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/amy-mccorry-phd-a454402b0/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+
+::: {.column width="40%"}
+```{=html}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="profile-card">
+        <img src="img/kim.jpg" alt="Profile Image">
+        <div class="profile-content">
+            <h2>Kimberley Hacquoil</h2>
+            <p>Chief Data Scientific Officer, Exploristics</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/kimberley-hacquoil/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+:::
+:::
+
+#  {background-iframe="iframe/index.html"}
+
+![](img/Exploristics-Logo-RGB.png){fig-align="center" width="700px"}
+
+## Example Project {background-image="Slides/main.PNG" background-size="contain"}
+
+-   Vaccine trial, across several countries, low-incidence rate - so need to recruit large number of patients across multiple countries.
+
+-   Create simulated Virtual Populations using KerusCloud with [recruitment sites]{.highlight} in 4 different countries, [baseline patient data]{.highlight} and [time to event]{.highlight} variable of disease occurrence.
+
+## Workflow {background-image="Slides/main.PNG" background-size="contain"}
+
+::: {style="display: flex; justify-content: space-between; align-items: center;"}
+::: {.box .fragment}
+Data Wrangling
+:::
+
+::: {.arrow .fragment}
+→
+:::
+
+::: {.box .fragment}
+EDA
+:::
+
+::: {.arrow .fragment}
+→
+:::
+
+::: {.box .fragment}
+Analysis/ Modeling
+:::
+
+::: {.arrow .fragment}
+→
+:::
+
+::: {.box .fragment}
+Data Viz\
+Reporting
+:::
+:::
+
+-   Data workflow is often visualized as linear but iterations occur at each stage.
+-   Streamlining these micro-iterations can lead to [efficiency]{.highlight} gains and a [better experience]{.highlight}.
+
+#  {background-iframe="iframe/index.html"}
+
+![](img/Kerus-Landscape.png){fig-align="center" width="700px"}
+
+## Simulated Data {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="70%"}
+![](img/Distribution.svg){width="600px"}
+:::
+
+::: {.column width="30%"}
+::: {.value-box style="background-color: #d8807f;"}
+**Female**
+
+Mean: 150 SD: 4
+:::
+
+::: {.value-box style="background-color: #121a31;"}
+[**Male**]{.highlight}
+
+[Mean: 165 SD: 5]{.highlight}
+:::
+:::
+:::
+
+## Simulated Data {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="70%"}
+![](img/animation.gif){width="600px"}
+:::
+
+::: {.column width="30%"}
+::: {.value-box style="background-color: #d8807f;"}
+**Female**
+
+Mean: 150 SD: 4
+:::
+
+::: {.value-box style="background-color: #121a31;"}
+[**Male**]{.highlight}
+
+[Mean: 165 SD: 4]{.highlight}
+:::
+:::
+:::
+
+## Create Realistic Virtual Populations {background-image="Slides/main.PNG" background-size="contain"}
+
+Create realistic virtual population data with up to [20,000 patients]{.highlight}, [10,000 simulations]{.highlight} and over [250,000 scenarios]{.highlight}
+
+::: columns
+::: {.column width="50%"}
+::: {.callout-tip appearance="simple" icon="false"}
+[Baseline and Endpoints]{.highlight}
+
+17 different variable types including:
+
+-   Continuous and Discrete\
+
+-   Time to event\
+
+-   Irreversible events\
+
+-   Repeated Measures\
+
+-   Correlated Data
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-tip appearance="simple" icon="false"}
+[Realistic Data]{.highlight}
+
+6 difference advanced options:
+
+-   Missingness \
+
+-   Trunction \
+
+-   Accuracy
+
+-   Apply [Estimands]{.highlight} to handle missing data
+:::
+:::
+:::
+
+## Patient Recruitment {background-image="Slides/main.PNG" background-size="contain"}
+
+![](img/Wafffle.png){.r-stretch style="text-align: center;"}
+
+::: fragment
+Conventional approaches to clinical trial design often neglect logistical issues, such as [recruiting patients]{.highlight}.
+:::
+
+::: fragment
+KerusCloud allows you recruit patients from up to\
+[10 sites]{.highlight}.
+:::
+
+## Patient Recruitment {background-image="Slides/main.PNG" background-size="contain"}
+
+![](img/Recruitment%20Profile%203.png){.r-stretch style="text-align: center;"}
+
+-   KerusCloud allows you to [modify recruitment rates]{.highlight} between [sites]{.highlight} and over [time]{.highlight}.
+
+#  {background-image="Slides/section1.PNG" background-size="contain"}
+
+::: columns
+:::{.column width="60%"}
+:::
+
+:::{.column width="40%"} 
+
+**Challenge**
+
+-   [How do I visualise these complex data?]{.highlight}
+:::
+:::
+
+#  {background-iframe="iframe/index.html"}
+
+![](img/VPV-logo.png){fig-align="center" width="400px"}
+
+
+## Create the plots you think of! {background-image="Slides/main.PNG" background-size="contain"}
+
+::: columns
+::: {.column width="50%"}
+-   Organisational theme applied as R package 📦
+
+-   Extension of [Esquisse](https://dreamrs.github.io/esquisse/index.html) functionality
+
+-   Real-time updating of data vizualisations
+:::
+
+::: {.column width="50%"}
+![](https://github.com/Exploristics/ExploristicsTheme/blob/main/man/figures/hex-ExploristicsTheme.png?raw=true){fig-align="center" width="400px"}
+
+![](https://github.com/dreamRs/esquisse/blob/master/man/figures/logo.png?raw=true){fig-align="center" width="400px"}
+:::
+:::
+
+# Walk-through {background-image="Slides/main.PNG" background-size="contain"}
+
+## Application
+
+<iframe src="http://127.0.0.1:4553/" width="100%" height="600px" frameborder="0">
+
+</iframe>
+
+## Benefits {background-image="Slides/main.PNG" background-size="contain"}
+
+-   Exploratory Data Analysis
+
+-   Sense check the inputs are correct
+
+-   Display complex data to non-technical audience
+
+-   Data Storytelling\
+
+-   Streamline reporting
+
+## Efficiency Gains {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: r-hstack
+::: {data-id="boxEDA" auto-animate-delay="0" style="background: #121a31; width: 500px; height: 150px; margin-bottom: 20px;"}
+[EDA]{.highlight}
+:::
+:::
+
+::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #18213B; width: 800px; height: 150px; margin-bottom: 20px;"}
+[Data Visualisation]{.highlight}
+:::
+:::
+
+::: r-hstack
+::: {data-id="boxReport" auto-animate-delay="0" style="background: #18213B; width: 700px; height: 150px; margin-bottom: 20px;"}
+[Reporting]{.highlight}
+:::
+:::
+
+## Efficiency Gains {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: r-hstack
+::: {data-id="boxEDA" auto-animate-delay="0" style="background: #121a31; width: 300px; height: 150px; margin-bottom: 20px;"}
+[EDA]{.highlight}
+:::
+
+::: {data-id="edaEff" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
+Efficiency
+:::
+:::
+
+::: r-hstack
+::: {data-id="box1" auto-animate-delay="0" style="background: #18213B; width: 400px; height: 150px; margin-bottom: 20px;"}
+[Data Visualisation]{.highlight}
+:::
+
+::: {data-id="box2" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
+Efficiency
+:::
+:::
+
+::: r-hstack
+::: {data-id="boxReport" auto-animate-delay="0" style="background: #18213B; width: 500px; height: 150px; margin-bottom: 20px;"}
+[Reporting]{.highlight}
+:::
+
+::: {data-id="reportEff" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
+Efficiency
+:::
+:::
+
+## Organisational Gains {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: r-hstack
+::: {.custom-box data-id="box1" auto-animate-delay="0"}
+[ProjA]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box2" auto-animate-delay="0"}
+:::
+
+::: {.custom-box data-id="box3" auto-animate-delay="0.4"}
+[ProjB]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box4" auto-animate-delay="0.4"}
+:::
+
+::: {.custom-box data-id="box5" auto-animate-delay="0.8"}
+[ProjC]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box6" auto-animate-delay="0.8"}
+:::
+
+::: {.custom-box data-id="box7" auto-animate-delay="1.2"}
+[ProjD]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box8" auto-animate-delay="1.2"}
+:::
+
+::: {.custom-box data-id="box9" auto-animate-delay="1.6"}
+[ProjE]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box10" auto-animate-delay="1.6"}
+:::
+:::
+
+::: r-hstack
+::: {.custom-box data-id="box11" auto-animate-delay="2.0"}
+[ProjF]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box12" auto-animate-delay="2.0"}
+:::
+
+::: {.custom-box auto-animate-delay="2.4"}
+[ProjG]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box14" auto-animate-delay="2.4"}
+:::
+
+::: {.custom-box data-id="box15" auto-animate-delay="2.8"}
+[ProjH]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box16" auto-animate-delay="2.8"}
+:::
+
+::: {.custom-box data-id="box17" auto-animate-delay="3.2"}
+[ProjI]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box18" auto-animate-delay="3.2"}
+:::
+
+::: {.custom-box data-id="box19" auto-animate-delay="3.6"}
+[ProjJ]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box20" auto-animate-delay="3.6"}
+:::
+:::
+
+::: r-hstack
+::: {.custom-box data-id="box21" auto-animate-delay="4.0"}
+[ProjK]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box22" auto-animate-delay="4.0"}
+:::
+
+::: {.custom-box data-id="box23" auto-animate-delay="4.4"}
+[ProjL]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box24" auto-animate-delay="4.4"}
+:::
+
+::: {.custom-box data-id="box25" auto-animate-delay="4.8"}
+[ProjM]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box26" auto-animate-delay="4.8"}
+:::
+
+::: {.custom-box data-id="box27" auto-animate-delay="5.2"}
+[ProjN]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box28" auto-animate-delay="5.2"}
+:::
+
+::: {.custom-box data-id="box29" auto-animate-delay="5.6"}
+[ProjO]{.highlight}
+:::
+
+::: {.custom-box-end data-id="box30" auto-animate-delay="5.6"}
+:::
+:::
+
+## Organisational Gains {auto-animate="true" auto-animate-easing="ease-in-out" background-image="Slides/main.PNG" background-size="contain"}
+
+::: r-hstack
+::: {.custom-box data-id="box1"}
+[ProjA]{.highlight}
+:::
+
+::: {.custom-box data-id="box3"}
+[ProjB]{.highlight}
+:::
+
+::: {.custom-box data-id="box5"}
+[ProjC]{.highlight}
+:::
+
+::: {.custom-box data-id="box7"}
+[ProjD]{.highlight}
+:::
+
+::: {.custom-box data-id="box9"}
+[ProjE]{.highlight}
+:::
+:::
+
+::: r-hstack
+::: {.custom-box data-id="box11"}
+[ProjF]{.highlight}
+:::
+
+::: {.custom-box data-id="box13" auto-animate-delay="0"}
+[ProjG]{.highlight}
+:::
+
+::: {.custom-box data-id="box15" auto-animate-delay="0"}
+[ProjH]{.highlight}
+:::
+
+::: {.custom-box data-id="box17" auto-animate-delay="0"}
+[ProjI]{.highlight}
+:::
+
+::: {.custom-box data-id="box19" auto-animate-delay="0"}
+[ProjJ]{.highlight}
+:::
+:::
+
+::: r-hstack
+::: {.custom-box data-id="box21" auto-animate-delay="0"}
+[ProjK]{.highlight}
+:::
+
+::: {.custom-box data-id="box23" auto-animate-delay="0"}
+[ProjL]{.highlight}
+:::
+
+::: {.custom-box data-id="box25" auto-animate-delay="0"}
+[ProjM]{.highlight}
+:::
+
+::: {.custom-box data-id="box27" auto-animate-delay="0"}
+[ProjN]{.highlight}
+:::
+
+::: {.custom-box data-id="box29" auto-animate-delay="0"}
+[ProjO]{.highlight}
+:::
+:::
+
+::: r-hstack
+::: {data-id="box2" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box4" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box6" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box8" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box10" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box12" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box14" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box16" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box18" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box20" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box22" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box24" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box26" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box28" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+::: {data-id="box30" auto-animate-delay="0" style="background: #89D8C1; width: 10px; height: 100px;"}
+:::
+
+-   Cumulative savings at an organisational level
+:::
+
+#  {background-iframe="iframe/index.html"}
+
+![](img/Exploristics-Logo-RGB.png){fig-align="center" width="700px"}
