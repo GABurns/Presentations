@@ -1,7 +1,10 @@
 ---
 title: "Virtual Population Visualisation"
-subtitle: "Streamlining data exploration and reporting for enhanced consistency, efficiency, and visual clarity."
+subtitle: "Streamlining data exploration and reporting for enhanced consistency, efficiency, and visual clarity"
 date:  "November 2024"
+project:
+  type: website
+  output-dir: docs
 author:
   - name: Gareth Burns
     attributes:
@@ -64,7 +67,7 @@ editor: visual
 :::
 
 ::: fragment
-✏️ Developer of KerusCloud, a cloud-based clinical-trial simulation tool.
+✏️ Developer of KerusCloud, a cloud-based clinical-trial simulation tool
 :::
 
 ::: fragment
@@ -137,15 +140,24 @@ editor: visual
 
 ## Example Project {background-image="Slides/main.PNG" background-size="contain"}
 
--   Vaccine trial, across several countries, low-incidence rate - so need to recruit large number of patients across multiple countries.
+-   Vaccine trial, across several countries, low-incidence rate - so need to recruit large number of patients across multiple countries
 
--   Create simulated Virtual Populations using KerusCloud with [recruitment sites]{.highlight} in 4 different countries, [baseline patient data]{.highlight} and [time to event]{.highlight} variable of disease occurrence.
+-   Create simulated Virtual Populations using KerusCloud with [recruitment sites]{.highlight} in 4 different countries, [baseline patient data]{.highlight} and [repeated measure]{.highlight} & [time to event]{.highlight} variables of disease occurrence
 
 ## Workflow {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: {style="display: flex; justify-content: space-between; align-items: center;"}
 ::: {.box .fragment}
+Research &
 Data Wrangling
+:::
+
+::: {.arrow .fragment}
+→
+:::
+
+::: {.box .fragment}
+Simulation
 :::
 
 ::: {.arrow .fragment}
@@ -161,21 +173,14 @@ EDA
 :::
 
 ::: {.box .fragment}
-Analysis/ Modeling
-:::
-
-::: {.arrow .fragment}
-→
-:::
-
-::: {.box .fragment}
-Data Viz\
+Data Viz &\
 Reporting
 :::
 :::
 
--   Data workflow is often visualized as linear but iterations occur at each stage.
--   Streamlining these micro-iterations can lead to [efficiency]{.highlight} gains and a [better experience]{.highlight}.
+
+-   Data workflow is often visualized as linear but iterations occur at each stage. 
+-   Streamlining these micro-iterations can lead to [efficiency]{.highlight} gains and a [better experience]{.highlight}
 
 #  {background-iframe="iframe/index.html"}
 
@@ -236,15 +241,13 @@ Create realistic virtual population data with up to [20,000 patients]{.highlight
 
 17 different variable types including:
 
--   Continuous and Discrete\
+-   Continuous and Discrete[ ----------]{style="color:white;"}
+-   Time to event [----------]{style="color:white;"}
+-   Irreversible events[----------]{style="color:white;"}
+-   Repeated Measures [----------]{style="color:white;"}
+    \
 
--   Time to event\
-
--   Irreversible events\
-
--   Repeated Measures\
-
--   Correlated Data
+- **Correlated Data**
 :::
 :::
 
@@ -254,12 +257,9 @@ Create realistic virtual population data with up to [20,000 patients]{.highlight
 
 6 difference advanced options:
 
--   Missingness \
-
--   Trunction \
-
--   Accuracy
-
+-   Missingness [----------]{style="color:white;"}
+-   Trunction[--------------]{style="color:white;"}
+-   Accuracy[---------------]{style="color:white;"}
 -   Apply [Estimands]{.highlight} to handle missing data
 :::
 :::
@@ -270,28 +270,27 @@ Create realistic virtual population data with up to [20,000 patients]{.highlight
 ![](img/Wafffle.png){.r-stretch style="text-align: center;"}
 
 ::: fragment
-Conventional approaches to clinical trial design often neglect logistical issues, such as [recruiting patients]{.highlight}.
+Conventional approaches to clinical trial design often neglect logistical issues, such as [recruiting patients]{.highlight}
 :::
 
 ::: fragment
 KerusCloud allows you recruit patients from up to\
-[10 sites]{.highlight}.
+[10 sites]{.highlight}
 :::
 
 ## Patient Recruitment {background-image="Slides/main.PNG" background-size="contain"}
 
 ![](img/Recruitment%20Profile%203.png){.r-stretch style="text-align: center;"}
 
--   KerusCloud allows you to [modify recruitment rates]{.highlight} between [sites]{.highlight} and over [time]{.highlight}.
+-   KerusCloud allows you to [modify recruitment rates]{.highlight} between [sites]{.highlight} and over [time]{.highlight}
 
 #  {background-image="Slides/section1.PNG" background-size="contain"}
 
 ::: columns
-:::{.column width="60%"}
+::: {.column width="60%"}
 :::
 
-:::{.column width="40%"} 
-
+::: {.column width="40%"}
 **Challenge**
 
 -   [How do I visualise these complex data?]{.highlight}
@@ -302,32 +301,44 @@ KerusCloud allows you recruit patients from up to\
 
 ![](img/VPV-logo.png){fig-align="center" width="400px"}
 
-
 ## Create the plots you think of! {background-image="Slides/main.PNG" background-size="contain"}
 
 ::: columns
 ::: {.column width="50%"}
--   Organisational theme applied as R package 📦
 
--   Extension of [Esquisse](https://dreamrs.github.io/esquisse/index.html) functionality
+::: {.fragment fragment-index=1}
+Organisational theme applied as R package 📦
+:::
 
--   Real-time updating of data vizualisations
+::: {.fragment fragment-index=2}
+Extension of [Esquisse](https://dreamrs.github.io/esquisse/index.html) functionality
+::: 
+
+::: {.fragment fragment-index=3}
+Real-time updating of data vizualisations
+:::
 :::
 
 ::: {.column width="50%"}
-![](https://github.com/Exploristics/ExploristicsTheme/blob/main/man/figures/hex-ExploristicsTheme.png?raw=true){fig-align="center" width="400px"}
+::: {.fragment fragment-index=1}
+::: {.fragment .fade-out fragment-index=2}
+![](https://github.com/Exploristics/ExploristicsTheme/blob/main/man/figures/hex-ExploristicsTheme.png?raw=true){.absolute top=150 right=50 width="400px"}
+:::
+:::
 
-![](https://github.com/dreamRs/esquisse/blob/master/man/figures/logo.png?raw=true){fig-align="center" width="400px"}
+::: {.fragment fragment-index=2}
+![](https://github.com/dreamRs/esquisse/blob/master/man/figures/logo.png?raw=true){.absolute top=150 right=50 width="400px"}
+:::
 :::
 :::
 
 # Walk-through {background-image="Slides/main.PNG" background-size="contain"}
 
-## Application
+<!-- ## Application -->
 
-<iframe src="http://127.0.0.1:4553/" width="100%" height="600px" frameborder="0">
+<!-- <iframe src="http://127.0.0.1:4553/" width="100%" height="600px" frameborder="0"> -->
 
-</iframe>
+<!-- </iframe> -->
 
 ## Benefits {background-image="Slides/main.PNG" background-size="contain"}
 
@@ -337,7 +348,7 @@ KerusCloud allows you recruit patients from up to\
 
 -   Display complex data to non-technical audience
 
--   Data Storytelling\
+-   Data Storytelling [-----------------------------]{style="color:white;"}
 
 -   Streamline reporting
 
@@ -345,19 +356,19 @@ KerusCloud allows you recruit patients from up to\
 
 ::: r-hstack
 ::: {data-id="boxEDA" auto-animate-delay="0" style="background: #121a31; width: 500px; height: 150px; margin-bottom: 20px;"}
-[EDA]{.highlight}
+[EDA]{.highlight .centered-text}
 :::
 :::
 
 ::: r-hstack
 ::: {data-id="box1" auto-animate-delay="0" style="background: #18213B; width: 800px; height: 150px; margin-bottom: 20px;"}
-[Data Visualisation]{.highlight}
+[Data Visualisation]{.highlight .centered-text}
 :::
 :::
 
 ::: r-hstack
 ::: {data-id="boxReport" auto-animate-delay="0" style="background: #18213B; width: 700px; height: 150px; margin-bottom: 20px;"}
-[Reporting]{.highlight}
+[Reporting]{.highlight .centered-text}
 :::
 :::
 
@@ -365,31 +376,31 @@ KerusCloud allows you recruit patients from up to\
 
 ::: r-hstack
 ::: {data-id="boxEDA" auto-animate-delay="0" style="background: #121a31; width: 300px; height: 150px; margin-bottom: 20px;"}
-[EDA]{.highlight}
+[EDA]{.highlight .centered-text}
 :::
 
 ::: {data-id="edaEff" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
-Efficiency
+[Efficiency]{.centered-text}
 :::
 :::
 
 ::: r-hstack
 ::: {data-id="box1" auto-animate-delay="0" style="background: #18213B; width: 400px; height: 150px; margin-bottom: 20px;"}
-[Data Visualisation]{.highlight}
+[Data Visualisation]{.highlight .centered-text}
 :::
 
 ::: {data-id="box2" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
-Efficiency
+[Efficiency]{.centered-text}
 :::
 :::
 
 ::: r-hstack
 ::: {data-id="boxReport" auto-animate-delay="0" style="background: #18213B; width: 500px; height: 150px; margin-bottom: 20px;"}
-[Reporting]{.highlight}
+[Reporting]{.highlight .centered-text}
 :::
 
 ::: {data-id="reportEff" auto-animate-delay="0" style="background: #89D8C1; width: 200px; height: 150px; margin-bottom: 20px;"}
-Efficiency
+[Efficiency]{.centered-text}
 :::
 :::
 
